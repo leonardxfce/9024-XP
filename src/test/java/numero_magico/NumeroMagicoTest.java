@@ -1,10 +1,11 @@
-package com.ies.app;
+package numero_magico;
 
 import junit.framework.TestCase;
 
-public class AppTest extends TestCase {
+public class NumeroMagicoTest extends TestCase {
 
     public void test_de_ejemplo() {
         assertTrue(true);
     }
+
 }

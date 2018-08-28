@@ -1,0 +1,9 @@
+.Diferencia entre estimar y definir: la diferencia entre estimar y definir es que en las estimaciones se le asigna un valor al problema en cuestion. Mientras que en 
+las definiciones se crea un plan con el que se trabajara a futuro hasta alcanzar el objetivo.
+.Las metodologias agiles son aquellas en las que se trabaja tratando de crear codigo funcional,sin necesidad de que este sea complejo y amplio, de hecho la idea 
+concretar pequeñas tareas una a la ves y que al unirlas se cree un programa complejo.
+.Las metodologias complejas son aquellas en las que se trata de crear un gran pograma de una sola vez. Esto conlleva un gran proseso previo de investigacin y 
+planificacion. El problema es esta metodologia es que cuando en el transcurso del proyecto el cliente pide una mofificación, se trendra que replantear el alcance 
+y el tiempo estimado del mismo lo que conllevara el alargue del proyecto y la utilizacion de mas recursos.
+Muy distinto es en las metodologias agiles donde al trabajar con pequeñas tareas una a la ves, el pedido de una nueva no cambiara los planes a futuro ni conllevara
+un aumento de los recursos utilizados. De hecho en estas metodologias se trata de integrar al cliente para facilitar el trabajo del desarrollador.

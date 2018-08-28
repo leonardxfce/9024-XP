@@ -26,4 +26,7 @@ public class Tablero {
         campoDeJuego[a] = marca;
         return jugador;
     }
+    public int[] retornoArray(){
+        return campoDeJuego;
+    }
 }

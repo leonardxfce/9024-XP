@@ -14,52 +14,6 @@ import junit.framework.TestCase;
  */
 public class AleatorioTest extends TestCase{
     
-   
-    /**
-     * Test of aleatorio method, of class Aleatorio.
-     */
-    /*public void testAleatorio() {
-        System.out.println("aleatorio");
-        String dato = "papel";
-        Aleatorio instance = new Aleatorio();
-        String expResult = "ganó";
-        String result = instance.aleatorio(dato);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
-     
-    public void testAleatorio01() {
-        System.out.println("aleatorio");
-        String dato = "piedra";
-        Aleatorio instance = new Aleatorio();
-        String expResult = "perdió";
-        String result = instance.aleatorio(dato);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
-    
-    public void testAleatorio02() {
-        System.out.println("aleatorio");
-        String dato = "tijera";
-        Aleatorio instance = new Aleatorio();
-        String expResult = "ganó";
-        String result = instance.aleatorio(dato);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
-    public void testAleatorio021() {
-        System.out.println("aleatorio");
-        String dato = "tijera";
-        Aleatorio instance = new Aleatorio();
-        String expResult = "empate";
-        String result = instance.aleatorio(dato);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }*/
     public void testAleatorio03() {
         System.out.println("aleatorio");
         String dato = "tijera";
@@ -70,7 +24,6 @@ public class AleatorioTest extends TestCase{
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
-    
     public void testAleatorio04() {
         System.out.println("aleatorio");
         String dato = "piedra";
@@ -81,7 +34,6 @@ public class AleatorioTest extends TestCase{
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
-    
     public void testAleatorio05() {
         System.out.println("aleatorio");
         String dato = "papel";

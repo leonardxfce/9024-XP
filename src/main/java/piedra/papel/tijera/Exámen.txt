@@ -1,0 +1,46 @@
+¿Cuales son los valores del agilismo?
+
+	- Individuos e interacciones sobre procesos y herramientas: debemos estar cerca del cliente, ya que   este es parte del equipo.
+
+	- Software funcionando sobre documentación extensiva: debemos hacer pequeñas entregas de sowtware   funcional. 
+
+	- Colaboración con el cliente sobre negociación contractual: el cliente es parte del equipo y es   quien pone los límites.
+
+	- Respuesta ante el cambio sobre un plan: la flexibilidad es la respuesta ante el cambio. El   programa debe estar preparada para los cambios de requisitos del 	  cliente.
+
+¿Cuales son las prácticas más importantes de XP?
+
+	- Testing.
+	- Programación de a pares.
+	- Refactorización.
+	- Código estándar.
+	- Diseño simple.
+	- Entregas cortas.
+
+¿Cuales son los roles de SCRUM?
+
+	-Product owner(dueño del producto)
+	-Scrum Master(Es el encargado de que los principios de Scrum sean respetados)
+	-Scrum Team(equipo encargado de realizar las tareas)
+
+¿Cuales son las reuniones de SCRUM?
+
+	-Ceremonia de planificacion de sprint:Es donde el dueño del producto dice las funcionalidades y se llevo acabo la realizacion de cada sprint, y prioriza 	 sprint.
+	-Ceremonia diaria: no lleva mas de 5-15 minutos, 
+	-Ceremonia de revision 
+	-Ceremonia de Retrospectiva
+
+Explicar uno de los métodos de estimación.
+
+	-T-Shirt sizing:
+Consiste en que un miembro del grupo lee una HU.
+Los demas miembros escriben en una hoja una estimacion(la que será representada por una talla de remera). Si no hay consenso el de mayor estimacion fundamenta su respuesta, al igual que el de la menor estimacion y se elige la más acertada.
+En caso de no llegar a un consenso se puede optar por la estimacion mas elegida, sino el scrum master realizaba una nueva votacion.
+
+Tablas de medidas:
+	XS= extra Small - Muy pequeño
+	S= Small - Pequeño
+	M= Medium - Mediano
+	L= Large - Grande
+	XL= extra Large - Muy grande
+  

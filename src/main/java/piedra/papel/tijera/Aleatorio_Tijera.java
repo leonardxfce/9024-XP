@@ -14,4 +14,3 @@ public class Aleatorio_Tijera {
         return dato;
     }
 }
-

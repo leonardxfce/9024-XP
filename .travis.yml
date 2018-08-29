@@ -10,7 +10,7 @@ addons:
       secure: $SONAR_TOKEN
 script:
   - mvn test  
-  - sonar-scanner
+  - mvn sonar:sonar -Dsonar.organization=leonardxfce-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=90cb94f5096f54262d1c0a7a511c61382a26f979
 cache:
   directories:
     - '$HOME/.m2/repository'

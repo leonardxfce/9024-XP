@@ -9,8 +9,5 @@ addons:
     organization: "leonardxfce-github"
     token:
       secure:$SONAR_TOKEN
-cache:
-  directories:
-    - '$HOME/.sonar/cache'
 after_success:
   - mvn cobertura:cobertura coveralls:report  

@@ -1,7 +1,16 @@
 language: java
 install:
-  mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
-  mvn test  
+  - mvn test  
+  - sonar-scanner -X
+addons:
+  sonarcloud:
+    organization: "leonardxfce-github"
+    token:
+      secure:$SONAR_TOKEN
+cache:
+  directories:
+    - '$HOME/.sonar/cache'
 after_success:
-  mvn cobertura:cobertura coveralls:report  
+  - mvn cobertura:cobertura coveralls:report  

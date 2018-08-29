@@ -14,35 +14,19 @@ public class Aleatorio {
         String retornar = "";
         String posibilidades[]= {"tijera", "piedra", "papel"};
         int numA= (int)(Math.random()*2);
-            if((dato.equals("tijera"))&& (posibilidades[numA].equals("tijera"))){
-                retornar= "empate";
+        for(int i = 0; i < 3;i++){
+            if(dato.equals(posibilidades[i])){
+                retornar = "empate";
             };
-            if((dato.equals("tijera"))&& (posibilidades[numA].equals("papel"))){
-                retornar= "gano";
-            };
-            if((dato.equals("tijera"))&& (posibilidades[numA].equals("piedra"))){
-                retornar= "perdió";
-            };
-            if((dato.equals("papel"))&& (posibilidades[numA].equals("papel"))){
-                retornar= "empate";
-            };
-            if((dato.equals("papel"))&& (posibilidades[numA].equals("tijera"))){
-                retornar= "perdió";
-            };
-            if((dato.equals("papel"))&& (posibilidades[numA].equals("piedra"))){
-                retornar= "gano";
-            };
-            if((dato.equals("piedra"))&& (posibilidades[numA].equals("piedra"))){
-                retornar= "empate";
-            };
-            if((dato.equals("piedra"))&& (posibilidades[numA].equals("papel"))){
-                retornar= "perdió";
-            };
-            if((dato.equals("piedra"))&& (posibilidades[numA].equals("tijera"))){
-                retornar= "gano";
-            };
-
-        
+        }
+        if((dato.equals("tijera"))&& (posibilidades[numA].equals("papel"))||
+          (dato.equals("papel"))&& (posibilidades[numA].equals("piedra")) ||
+          (dato.equals("piedra"))&& (posibilidades[numA].equals("tijera"))){
+            retornar = "gan�";
+        } else {
+            retornar = "perdi�";
+        }
         return retornar;
-    }
+    };
+        
 }

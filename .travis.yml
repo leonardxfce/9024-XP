@@ -3,7 +3,7 @@ install:
   - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
   - mvn test  
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
+  - sonar-scanner
 addons:
   sonarcloud:
     organization: "leonardxfce-github"

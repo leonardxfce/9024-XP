@@ -3,16 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package piedra.papel.tijera;
+package piedra_papel_tijera;
 
 /**
  *
  * @author caro_
  */
-public class Aleatorio_Piedra {
-    public String piedraEj (String dato){
-        
+public class Aleatorio_Papel {
+    public String papelEj (String dato){
         return dato;
-        
     }
 }

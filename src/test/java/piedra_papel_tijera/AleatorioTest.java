@@ -3,9 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package piedra.papel.tijera;
+package piedra_papel_tijera;
 
 
+import piedra_papel_tijera.Aleatorio_Piedra;
+import piedra_papel_tijera.Aleatorio_Papel;
+import piedra_papel_tijera.Aleatorio_Tijera;
 import junit.framework.TestCase;
 
 /**

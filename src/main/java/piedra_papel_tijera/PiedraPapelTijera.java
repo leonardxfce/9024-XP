@@ -3,14 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package piedra.papel.tijera;
+package piedra_papel_tijera;
 
 /**
  *
  * @author caro_
  */
-public class Aleatorio_Tijera {
-    public String tijeraEj (String dato){
-        return dato;
+public class PiedraPapelTijera {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
     }
+    
 }

@@ -8,7 +8,7 @@ addons:
   sonarcloud:
     organization: "leonardxfce-github"
     token:
-      secure:SONAR_TOKEN
+      secure:$SONAR_TOKEN
 cache:
   directories:
     - '$HOME/.sonar/cache'

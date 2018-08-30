@@ -10,10 +10,10 @@ public class NumeroMagicoTest extends TestCase {
         int result2 = nm.crearNumeroMagico();
         assertFalse(result == result2);
     }
-    //public void testCompararNumeros(){
-      //  NumeroMagico nm = new NumeroMagico();
-        //NumeroUsuario nu = new NumeroUsuario();
+    public void testCompararNumeros(){
+        NumeroMagico nm = new NumeroMagico();
+        NumeroUsuario nu = new NumeroUsuario();
         
         
-    //}
+    }
 }

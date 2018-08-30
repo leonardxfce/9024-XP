@@ -1,8 +1,16 @@
 language: java
 install:
-  - travis_wait 30 mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  -mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 script:
-  - mvn test  
+  - mvn test -B
 after_success:
   - mvn cobertura:cobertura coveralls:report  
-bundler_args: --retry 15
+bundler_args: --retry 
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.sonar/cache'
+jdk:
+  - oraclejdk8
+sudo: false
+install: true

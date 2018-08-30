@@ -2,8 +2,15 @@ os: osx
 language: java
 script:
   - mvn test -B
+  - sonar-scanner
 after_success:
   - mvn cobertura:cobertura coveralls:report  
 jdk:
   - oraclejdk8
 sudo: false
+addons:
+  sonarcloud:
+    organization: "9024-XP"
+    token:
+      secure: $SONAR_TOKEN
+  

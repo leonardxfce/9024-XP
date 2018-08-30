@@ -4,8 +4,16 @@ import junit.framework.TestCase;
 
 public class NumeroMagicoTest extends TestCase {
 
-    public void test_de_ejemplo() {
-        assertTrue(true);
+    public void testGenerarNumeroAleatorio() {
+        NumeroMagico nm = new NumeroMagico();
+        int result = nm.crearNumeroMagico();
+        int result2 = nm.crearNumeroMagico();
+        assertFalse(result == result2);
     }
-
+    public void testCompararNumeros(){
+        NumeroMagico nm = new NumeroMagico();
+        NumeroUsuario nu = new NumeroUsuario();
+        
+        
+    }
 }

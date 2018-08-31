@@ -52,16 +52,23 @@ public class AhorcadoTest extends TestCase {
     }
     
     public void testAhorcado7() {
-        Ahorcado intance = new Ahorcado();
-        boolean comprobar = intance.comprobarLetra('z');
-        int result = intance.vidasRestantes(comprobar);
+        Ahorcado instance = new Ahorcado();
+        boolean comprobar = instance.comprobarLetra('z');
+        int result = instance.vidasRestantes(comprobar);
         assertEquals(result , 2);
     }
     public void testAhorcado8() {
-        Ahorcado intance = new Ahorcado();
-        boolean comprobar = intance.comprobarLetra('u');
-        int result = intance.vidasRestantes(comprobar);
+        Ahorcado instance = new Ahorcado();
+        boolean comprobar = instance.comprobarLetra('u');
+        int result = instance.vidasRestantes(comprobar);
         assertEquals(result , 3);
+    }
+    
+    public void testAhorcado9 () {
+        Ahorcado instance = new Ahorcado();
+        String result=instance.elegirPalabra();
+        String resultado = instance.elegirPalabra();
+        assertTrue (result != resultado);
     }
     
 }

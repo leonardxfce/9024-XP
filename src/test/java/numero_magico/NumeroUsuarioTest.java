@@ -9,6 +9,6 @@ package numero_magico;
  *
  * @author lautaro
  */
-class NumeroUsuario {
+class NumeroUsuarioTest {
     
 }

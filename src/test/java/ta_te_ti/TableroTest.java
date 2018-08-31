@@ -11,9 +11,9 @@ import junit.framework.TestCase;
  *
  * @author SantiagoGuirado
  */
-public class testTablero extends TestCase {
+public class TableroTest extends TestCase {
     
-    public testTablero(String testName) {
+    public TableroTest(String testName) {
         super(testName);
     }
     

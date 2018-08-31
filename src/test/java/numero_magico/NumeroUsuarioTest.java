@@ -5,10 +5,16 @@
  */
 package numero_magico;
 
+import static junit.framework.TestCase.assertTrue;
+
 /**
  *
  * @author lautaro
  */
 class NumeroUsuarioTest {
     
+    public void test_de_ejemplo() {
+        System.out.println("Algo");
+        assertTrue(true);
+    }
 }

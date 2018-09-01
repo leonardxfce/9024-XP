@@ -25,9 +25,7 @@ public class NumeroMagicoTest extends TestCase {
     public void testCompararNumeroigual(){
         NumeroMagico nm = new NumeroMagico();
         int numUsuario = 70 ;
-        System.out.println("El numero del usuario es"+numUsuario);
         String result = nm.compararNumeros(numUsuario);
-        System.out.println("el numero aleatorio es");
         assertEquals(result,"IGUAL");
     }
 }

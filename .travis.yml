@@ -3,7 +3,7 @@ language: java
 script:
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
 after_success:
-- mvn clean cobertura:cobertura org.eluder.coveralls:coveralls-maven-plugin:report
+  - mvn cobertura:cobertura org.eluder.coveralls:coveralls-maven-plugin:report
 jdk:
   - oraclejdk8
 sudo: false

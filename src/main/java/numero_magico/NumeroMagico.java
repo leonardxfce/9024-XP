@@ -9,7 +9,6 @@ public class NumeroMagico {
     }
 
     String compararNumeros(int numUsuario) {
-        //int NumeroMagico = (int) (Math.random() * 100) + 1;
         int NumeroMagico = 70;
         System.out.println("El numero aleatorio es"+NumeroMagico);
         if (numUsuario<NumeroMagico){

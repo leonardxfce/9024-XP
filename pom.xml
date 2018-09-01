@@ -33,7 +33,7 @@
                 <artifactId>coveralls-maven-plugin</artifactId>
                 <version>4.3.0</version>
                 <configuration>
-                    <repoToken>L93evkvJ0sC6SHEt2Ukdvf6T4ma1k2i3l</repoToken>
+                    <repoToken>KPpMG2B6OlXWmvLATL9MRRKbf6bpo48cd</repoToken>
                 </configuration>
             </plugin>
             <plugin>
@@ -45,19 +45,6 @@
                     <maxmem>256m</maxmem>
                     <aggregate>true</aggregate>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.6.201602180812</version>
-                <executions>
-                    <execution>
-                        <id>prepare-agent</id>
-                        <goals>
-                            <goal>prepare-agent</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

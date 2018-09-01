@@ -10,10 +10,24 @@ public class NumeroMagicoTest extends TestCase {
         int result2 = nm.crearNumeroMagico();
         assertFalse(result == result2);
     }
-    //public void testCompararNumeros(){
-      //  NumeroMagico nm = new NumeroMagico();
-        //NumeroUsuario nu = new NumeroUsuario();
-        
-        
-    //}
+    public void testCompararNumeros(){
+        NumeroMagico nm = new NumeroMagico();
+        int numUsuario = -1 ;
+        String result = nm.compararNumeros(numUsuario);
+        assertEquals(result, "MAYOR");
+    }
+    public void testCompararNumeros102(){
+        NumeroMagico nm = new NumeroMagico();
+        int numUsuario = 102 ;
+        String result = nm.compararNumeros(numUsuario);
+        assertEquals(result, "MENOR");
+    }
+    public void testCompararNumeroigual(){
+        NumeroMagico nm = new NumeroMagico();
+        int numUsuario = 70 ;
+        System.out.println("El numero del usuario es"+numUsuario);
+        String result = nm.compararNumeros(numUsuario);
+        System.out.println("el numero aleatorio es");
+        assertEquals(result,"IGUAL");
+    }
 }

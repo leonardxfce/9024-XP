@@ -48,4 +48,25 @@ public class AleatorioTest extends TestCase {
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
+    public void testPiedracontraTijera(){
+        String datoUsuario = "piedra";
+        int jugadaPC = 0;
+        ComprobarJugada a = new ComprobarJugada();
+        String result = a.comprobar(jugadaPC, datoUsuario);
+        assertEquals(result, "gano");
+    }
+    public void testPiedracontraPapel(){
+        String datoUsuario = "piedra";
+        int jugadaPC = 2;
+        ComprobarJugada a = new ComprobarJugada();
+        String result = a.comprobar(jugadaPC, datoUsuario);
+        assertEquals(result, "perdio");
+    }
+    public void testPiedracontraPiedra(){
+        String datoUsuario = "piedra";
+        int jugadaPC = 1;
+        ComprobarJugada a = new ComprobarJugada();
+        String result = a.comprobar(jugadaPC, datoUsuario);
+        assertEquals(result, "empato");
+    }
 }

@@ -22,9 +22,9 @@ public class Aleatorio {
         if((dato.equals("tijera"))&& (posibilidades[numA].equals("papel"))||
           (dato.equals("papel"))&& (posibilidades[numA].equals("piedra")) ||
           (dato.equals("piedra"))&& (posibilidades[numA].equals("tijera"))){
-            retornar = "gan�";
+            retornar = "gano";
         } else {
-            retornar = "perdi�";
+            retornar = "perdio";
         }
         return retornar;
     };

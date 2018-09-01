@@ -29,12 +29,12 @@ public class TestJugada extends TestCase {
 
     // TODO add test methods here. The name must begin with 'test'. For example:
     // public void testHello() {}
-    public void testTablero() {
+    /**public void testTablero() {
         System.out.println("test de jugada:");
         Jugada instance = new Jugada();
         int valor = 5;
         int expectativa =5 ;
-        int respuesta = instance.pedirNumero();
+        int respuesta = instance.pedirNumero(5);
         assertEquals(expectativa, respuesta);
-    }
+    }*/
 }

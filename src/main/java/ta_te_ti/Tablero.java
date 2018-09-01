@@ -10,23 +10,35 @@ package ta_te_ti;
  * @author ikariRules
  */
 public class Tablero {
-    int[] campoDeJuego= new int[9];
+    int[] campoDeJuego={0,0,0,0,0,0,0,0,0};
     boolean jugador = true;
+    public int lugarAMarcar(int f){
+        int lugarMarcado=f;
+        return lugarMarcado;
+    }
     
-    public boolean elTablero(int a){
+    public int[] elTablero(int pocisionEnElTablero){
+        //int[] tableroMarcado= campoDeJuego[]; 
         int marca = 0;
         if (jugador == true){
             marca = 5;
             jugador = false;
-        } 
-        if (jugador == false) {
+        } else {
             marca = 9;
             jugador = true;
         }
-        campoDeJuego[a] = marca;
-        return jugador;
-    }
-    public int[] retornoArray(){
+        campoDeJuego[pocisionEnElTablero]=marca;
         return campoDeJuego;
     }
-}
+    public void marcaraEnTablero(){
+        int longitud= campoDeJuego.length;
+        for (int i = 0 ; i < longitud; ++i){
+            if (campoDeJuego[i]==5){
+                System.out.println("win");
+            }
+           // System.out.println(campoDeJuego[i]);
+        }
+        }
+    }
+
+

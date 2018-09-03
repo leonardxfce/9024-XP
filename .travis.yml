@@ -1,7 +1,7 @@
 os: osx
 language: java
 script:
-  - mvn clean test jacoco:report coveralls:report package sonar:sonar 
+  - mvn clean test jacoco:report package sonar:sonar 
 jdk:
   - oraclejdk8
 sudo: false

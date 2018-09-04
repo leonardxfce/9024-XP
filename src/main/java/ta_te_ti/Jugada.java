@@ -1,24 +1,60 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ta_te_ti;
-
-import java.util.Scanner;
 
 /**
  *
  * @author ikariRules
  */
 public class Jugada {
-    boolean jugador= true;
-    public int pedirNumero(){
-        int posicion;
-        System.out.println("Ingrese un numero:");
-        Scanner lector = new Scanner(System.in);
-        posicion = lector.nextInt();
-        return posicion;
-    }
     
+    
+    public void buscarGanador(int[] g){
+        for (int i = 0 ; i < 2; ++i){
+            if (g[i]==5){
+                System.out.println("win");
+            }
+           // System.out.println(campoDeJuego[i]);
+        }
+        for (int r = 3 ; r < 5; ++r){
+            if (g[r]==5){
+                System.out.println("win");
+            }
+           // System.out.println(campoDeJuego[i]);
+        }
+        for (int h = 6 ; h <8 ; ++h){
+            if (g[h]==5){
+                System.out.println("win");
+            }
+           // System.out.println(campoDeJuego[i]);
+        }
+        for (int u = 0 ; u < g.length; ++u){
+            if (g[0] == g[3] && g[3] == g[6]){
+                System.out.println("win");
+            }
+           // System.out.println(campoDeJuego[i]);
+        }
+        for (int p = 0 ; p < g.length; ++p){
+            if (g[1] == g[4] && g[4] == g[7]){
+                System.out.println("win");
+            }
+           // System.out.println(campoDeJuego[i]);
+        }
+         for (int p = 0 ; p < g.length; ++p){
+            if (g[2] == g[5] && g[5] == g[8]){
+                System.out.println("win");
+            }
+           // System.out.println(campoDeJuego[i]);
+        }
+                  for (int p = 0 ; p < g.length; ++p){
+            if (g[0] == g[4] && g[4] == g[8]){
+                System.out.println("win");
+            }
+           // System.out.println(campoDeJuego[i]);
+        }
+                 for (int p = 0 ; p < g.length; ++p){
+            if (g[2] == g[4] && g[4] == g[6]){
+                System.out.println("win");
+            }
+           // System.out.println(campoDeJuego[i]);
+        }
+    }
 }

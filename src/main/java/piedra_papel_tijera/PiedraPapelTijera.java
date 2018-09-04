@@ -24,7 +24,7 @@ public class PiedraPapelTijera {
         System.out.println("Ingrese su opción: ");
         dato = leer.nextLine();
         JugadaComputadora nuevaJugada = new JugadaComputadora();
-        numA = nuevaJugada.Aleatorio();
+        numA = nuevaJugada.aleatorio();
         ComprobarJugada comp = new ComprobarJugada();
         //String resultado []= new String [3];
         String resultado = comp.comprobar(numA, dato);

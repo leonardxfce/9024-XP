@@ -1,7 +1,6 @@
 os: osx
 language: java
 script:
-  - jdk_switcher use oraclejdk8
   - mvn clean test jacoco:report package sonar:sonar 
 jdk:
   - oraclejdk8

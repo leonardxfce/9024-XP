@@ -128,5 +128,42 @@ public class Tablero {
         }
         return retorno;
     }
+    
+    //metodo que imprime en pantalla el metodo actual
+    public String escribirElJugadorActual(int dato){
+        String retorno = "";
+        if (dato == 1) {
+            retorno = "Juega el primer jugador";
+        }
+        if (dato == 2) {
+            retorno = "Juega el segundo jugador";
+        }
+        System.err.println(retorno);
+        return retorno;
+    }
+    
+    //metodo que en vase a lo que no dice el metodo verificadorDePosicionOcupada 
+    //imprimira en pantalla el metodo correspondiente
+    public String escribirPosicionOcupadaDesocupada(boolean dato){
+        String retorno = "";
+        if (dato) {
+            retorno = "La posicion elegida esta ocupada";
+        }
+        System.err.println(retorno);
+        return retorno;
+    }
+    
+    //metodo que imprime en pantalla el jugador ganador
+    public String escribirJugadorGanador(String dato){
+        String retorno = "";
+        if (dato == "JD1") {
+            retorno = "Gano el jugador 1";
+        }
+        if (dato == "JD2") {
+            retorno = "Gano el jugador 2";
+        }
+        System.err.println(retorno);
+        return retorno;
+    }
 
 }

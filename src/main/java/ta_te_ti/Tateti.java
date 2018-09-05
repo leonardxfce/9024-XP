@@ -1,30 +1,35 @@
 package ta_te_ti;
 
+import java.util.Scanner;
+
 public class Tateti {
 
     public static void main(String[] args) {
-        //objetos
-        Jugada jugadas = new Jugada();
+        Scanner tecla = new Scanner(System.in);
         Tablero miTablero = new Tablero();
-        
-        //se comienza el algoritmo
         int contador = 0;
-        while (contador == 9) {
-            int valor = jugadas.pedirNumero();
-            boolean posicionOcupada = miTablero.verificadorDePosicionOcupada(valor);
-            if(posicionOcupada == false){
-                miTablero.marcaDeCadaJugadorEnTablero(valor);
-                miTablero.cambioDeJugador();
-            } else {
-                System.out.println("la posicion esta ocupada");
+        boolean bandera = false;
+        //comienza el algoritmo
+        String ganador = null;
+        while (contador != 9 && bandera == false) {
+            miTablero.escribirElJugadorActual(miTablero.jugadorActual());
+            boolean salida = false;
+            do {
+                int ingreso = tecla.nextInt();
+                String ocupado = miTablero.escribirPosicionOcupadaDesocupada(miTablero.verificadorDePosicionOcupada(ingreso - 1));
+                if (ocupado == "") {
+                    miTablero.marcaDeCadaJugadorEnTablero(ingreso - 1);
+                    salida = true;
+                }
+            } while(salida == false);
+            miTablero.cambioDeJugador();
+            ganador = miTablero.lineaCompletada();
+            if (ganador != null) {
+                bandera = true;
             }
             contador++;
         }
-        
-        String[] tablero = miTablero.devolverVector();
-        for(int n = 0; n < 9; n++){
-            System.out.println(tablero[n]);
-        }
+        miTablero.escribirJugadorGanador(miTablero.lineaCompletada());
 
     }
 }

@@ -6,7 +6,7 @@ public class Ahorcado {
     String palabras;
     int letraRestantes;
     int vidas;
-    ArrayList<String> conjuntoDePalabra = new ArrayList<String>();
+    ArrayList<String> conjuntoDePalabra = new ArrayList<>();
 
     public Ahorcado() {
         this.palabras = "buho";
@@ -19,18 +19,17 @@ public class Ahorcado {
     }
     
     String elegirPalabra () {
-        int tamaño = this.conjuntoDePalabra.size()-1;
-        int indice = (int) (Math.random()*tamaño);
+        int tamano = this.conjuntoDePalabra.size()-1;
+        int indice = (int) (Math.random()*tamano);
         String palabra=this.conjuntoDePalabra.get(indice);
         this.conjuntoDePalabra.remove(indice);
-        System.out.println(palabra);
         return palabra;
     }
 
-    boolean  comprobarLetra(char letra) {
+    boolean  comprobarLetra(char letra ) {
         boolean z=false;
         
-        for (int i=0 ; i< palabras.length() ; i++){
+        for (int i=0 ; i< this.palabras.length() ; i++){
             if (palabras.charAt(i) == letra){
                 z=true;
                 this.letraRestantes --; 
@@ -45,11 +44,18 @@ public class Ahorcado {
         }
         return z;
     }
-    int vidasRestantes(boolean z){
+        int vidasRestantes(boolean z){
         boolean vida = true;
         if (z == false){
             this.vidas -- ;
         }
         return this.vidas;
     }
+    /*String comprobarVidas (){
+        String estado;
+        if (this.vidas == 0 ){
+            estado = "Perdiste";
+        }
+        return estado;
+    }*/
 }

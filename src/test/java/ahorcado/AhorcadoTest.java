@@ -53,12 +53,14 @@ public class AhorcadoTest extends TestCase {
     
     public void testAhorcado7() {
         Ahorcado instance = new Ahorcado();
+        Jugador jugador = new Jugador();
         boolean comprobar = instance.comprobarLetra('z');
         int result = instance.vidasRestantes(comprobar);
         assertEquals(result , 2);
     }
     public void testAhorcado8() {
         Ahorcado instance = new Ahorcado();
+        Jugador jugador = new Jugador();
         boolean comprobar = instance.comprobarLetra('u');
         int result = instance.vidasRestantes(comprobar);
         assertEquals(result , 3);

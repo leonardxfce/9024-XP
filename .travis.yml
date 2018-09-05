@@ -5,7 +5,7 @@ script:
 jdk:
   - oraclejdk8
 after_success:
-  - mvn clean cobertura:cobertura coveralls:report -P coveralls.io
+  - mvn clean cobertura:cobertura coveralls:report
 sudo: false
 addons:
   sonarcloud:

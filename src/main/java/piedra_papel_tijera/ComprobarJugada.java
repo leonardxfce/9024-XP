@@ -23,10 +23,22 @@ public class ComprobarJugada {
         } else {
             return "perdio";
         }
+        
     }
+    
+    public String jugarTresVeces(int jugadaComputadora, String datoUsuario){
+        String resultJugada[]= new String [3];
+        for (int i= 0; i<3;i++){
+            resultJugada[i]= this.comprobar(jugadaComputadora,datoUsuario);
+            
+        }
+        return "";
+        
+}
     public String computadoraResult(int numA){
         String posibilidades[]= {"tijera", "piedra", "papel"};
         String retor = "La jugada de la computadora fue: "+posibilidades[numA];
         return retor;
     }
+    
 }

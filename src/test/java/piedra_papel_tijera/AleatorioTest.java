@@ -69,4 +69,32 @@ public class AleatorioTest extends TestCase {
         String result = a.comprobar(jugadaPC, datoUsuario);
         assertEquals(result, "empato");
     }
+    
+    public void testRestarVidas(){
+        int restar = 1;
+        Usuario a = new Usuario();
+        int result = a.quitarVidas(restar);
+        assertEquals(result,2);
+    }
+    
+    public void testJugarTresVecesYPerder(){
+        String datoUsuario[]= {"piedra","papel","tijera"};
+        ComprobarJugada a = new ComprobarJugada();
+        int jugadaPC []= new int[3];
+        int b= 0;
+        String result []=new String[3];
+        String resultFinal = "";
+        for(int i=0; i<3; i++){
+            result[i] = a.comprobar(jugadaPC[i],datoUsuario[i]);
+            if(result[i]=="gano"){
+                b = b + 1;
+            }
+        }
+        if(b>= 2){
+            resultFinal = "gano";
+        }else{
+            resultFinal = "perdio";
+        }
+        assertEquals(resultFinal, "perdio");
+    }
 }

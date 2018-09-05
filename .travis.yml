@@ -4,6 +4,8 @@ script:
   - mvn clean test jacoco:report package sonar:sonar 
 jdk:
   - oraclejdk8
+after_success:
+  - mvn clean cobertura:cobertura coveralls:report -P coveralls.io
 sudo: false
 addons:
   sonarcloud:

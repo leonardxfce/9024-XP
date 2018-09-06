@@ -180,7 +180,7 @@ public class TableroTest extends TestCase {
         instance.marcaDeCadaJugadorEnTablero(1);
         instance.marcaDeCadaJugadorEnTablero(2);
         //y se verifica el metodo
-        String expResult = "JD1";
+        String expResult = "J1";
         String result = instance.lineaCompletada();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -197,7 +197,7 @@ public class TableroTest extends TestCase {
         instance.marcaDeCadaJugadorEnTablero(1);
         instance.marcaDeCadaJugadorEnTablero(2);
         //y se verifica el metodo
-        String expResult = "JD2";
+        String expResult = "J2";
         String result = instance.lineaCompletada();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.

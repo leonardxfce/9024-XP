@@ -24,12 +24,9 @@ public class Tablero {
         String contenidoPosicionTablero = campoDeTablero[posicionIngresadoPorJugador];
         boolean banderaPosicionOcupada = false;
         if (contenidoPosicionTablero == null) {
-            banderaPosicionOcupada = false;
+            
         } else {
-            if (contenidoPosicionTablero.equals("J1")) {
-                banderaPosicionOcupada = true;
-            }
-            if (contenidoPosicionTablero.equals("J2")) {
+            if (contenidoPosicionTablero.equals("J1")||(contenidoPosicionTablero.equals("J2"))) {
                 banderaPosicionOcupada = true;
             }
         }

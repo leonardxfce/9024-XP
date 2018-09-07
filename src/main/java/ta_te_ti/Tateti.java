@@ -11,7 +11,7 @@ public class Tateti {
         boolean bandera = false;
         //comienza el algoritmo
         String ganador = null;
-        while (contador != 9 && bandera == false) {
+        while (contador != 9 && bandera) {
             miTablero.escribirElJugadorActual(miTablero.jugadorActual());
             boolean salida = false;
             do {
@@ -21,7 +21,7 @@ public class Tateti {
                     miTablero.marcaDeCadaJugadorEnTablero(ingreso - 1);
                     salida = true;
                 }
-            } while(salida == false);
+            } while(salida);
             miTablero.cambioDeJugador();
             ganador = miTablero.lineaCompletada();
             if (ganador != null) {

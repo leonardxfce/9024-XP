@@ -12,6 +12,8 @@ package ta_te_ti;
 public class Tablero {
 
     String[] campoDeTablero = new String[9];
+    String marca[] = {"J1", "J2"};
+    boolean banderaPosicionOcupada;
     int jugador = 1;
 
     //este metodo define el jugador actual
@@ -22,7 +24,6 @@ public class Tablero {
     //en este metodo se verifica si la posicion elegida esta marcada
     public boolean verificadorDePosicionOcupada(int posicionIngresadoPorJugador) {
         String contenidoPosicionTablero = campoDeTablero[posicionIngresadoPorJugador];
-        boolean banderaPosicionOcupada = false;
         if (contenidoPosicionTablero == null) {
             
         } else {
@@ -37,10 +38,10 @@ public class Tablero {
     public String marcaDeCadaJugadorEnTablero(int posicionIngresadoPorJugador) {
         String marcaDeCadaJugador = "";
         if (jugador == 1) {
-            marcaDeCadaJugador = "J1";
+            marcaDeCadaJugador = marca[0];
         }
         if (jugador == 2) {
-            marcaDeCadaJugador = "J2";
+            marcaDeCadaJugador = marca[1];
         }
         campoDeTablero[posicionIngresadoPorJugador] = marcaDeCadaJugador;
         return marcaDeCadaJugador;
@@ -54,7 +55,7 @@ public class Tablero {
             banderaEntrada = true;
         }
 
-        if (jugador == 2 && banderaEntrada == false) {
+        if (jugador == 2 && !banderaEntrada) {
             jugador = 1;
         }
         return jugador;
@@ -68,66 +69,39 @@ public class Tablero {
     //metodo para verificar el ganador
     public String lineaCompletada() {
         String retorno = null;
-        if (campoDeTablero[0] == "J1" && campoDeTablero[1] == "J1" && campoDeTablero[2] == "J1") {
-            retorno = "J1";
-        }
-        if (campoDeTablero[0] == "J2" && campoDeTablero[1] == "J2" && campoDeTablero[2] == "J2") {
-            retorno = "J2";
-        }
-
-        if (campoDeTablero[3] == "J1" && campoDeTablero[4] == "J1" && campoDeTablero[5] == "J1") {
-            retorno = "J1";
-        }
-        if (campoDeTablero[3] == "J2" && campoDeTablero[4] == "J2" && campoDeTablero[5] == "J2") {
-            retorno = "J2";
-        }
-
-        if (campoDeTablero[6] == "J1" && campoDeTablero[7] == "J1" && campoDeTablero[8] == "J1") {
-            retorno = "J1";
-        }
-        if (campoDeTablero[6] == "J2" && campoDeTablero[7] == "J2" && campoDeTablero[8] == "J2") {
-            retorno = "J2";
-        }
-
-        if (campoDeTablero[0] == "J1" && campoDeTablero[3] == "J1" && campoDeTablero[6] == "J1") {
-            retorno = "J1";
-        }
-        if (campoDeTablero[0] == "J2" && campoDeTablero[3] == "J2" && campoDeTablero[6] == "J2") {
-            retorno = "J2";
-        }
-
-        if (campoDeTablero[1] == "J1" && campoDeTablero[4] == "J1" && campoDeTablero[7] == "J1") {
-            retorno = "J1";
-        }
-        if (campoDeTablero[1] == "J2" && campoDeTablero[4] == "J2" && campoDeTablero[7] == "J2") {
-            retorno = "J2";
-        }
-
-        if (campoDeTablero[2] == "J1" && campoDeTablero[5] == "J1" && campoDeTablero[8] == "J1") {
-            retorno = "J1";
-        }
-        if (campoDeTablero[2] == "J2" && campoDeTablero[5] == "J2" && campoDeTablero[8] == "J2") {
-            retorno = "J2";
-        }
-
-        if (campoDeTablero[0] == "J1" && campoDeTablero[4] == "J1" && campoDeTablero[8] == "J1") {
-            retorno = "J1";
-        }
-        if (campoDeTablero[0] == "J2" && campoDeTablero[4] == "J2" && campoDeTablero[8] == "J2") {
-            retorno = "J2";
-        }
-
-        if (campoDeTablero[6] == "J1" && campoDeTablero[4] == "J1" && campoDeTablero[2] == "J1") {
-            retorno = "J1";
-        }
-        if (campoDeTablero[6] == "J2" && campoDeTablero[4] == "J2" && campoDeTablero[2] == "J2") {
-            retorno = "J2";
+        int cont = 0;
+        while (cont < 2) {
+            if (campoDeTablero[0] == marca[cont] && campoDeTablero[1] == marca[cont] && campoDeTablero[2] == marca[cont]) {
+                retorno = marca[cont];
+            }
+            if (campoDeTablero[3] == marca[cont] && campoDeTablero[4] == marca[cont] && campoDeTablero[5] == marca[cont]) {
+                retorno = marca[cont];
+            }
+            if (campoDeTablero[6] == marca[cont] && campoDeTablero[7] == marca[cont] && campoDeTablero[8] == marca[cont]) {
+                retorno = marca[cont];
+            }
+            if (campoDeTablero[0] == marca[cont] && campoDeTablero[3] == marca[cont] && campoDeTablero[6] == marca[cont]) {
+                retorno = marca[cont];
+            }
+            if (campoDeTablero[1] == marca[cont] && campoDeTablero[4] == marca[cont] && campoDeTablero[7] == marca[cont]) {
+                retorno = marca[cont];
+            }
+            if (campoDeTablero[2] == marca[cont] && campoDeTablero[5] == marca[cont] && campoDeTablero[8] == marca[cont]) {
+                retorno = marca[cont];
+            }
+            if (campoDeTablero[0] == marca[cont] && campoDeTablero[4] == marca[cont] && campoDeTablero[8] == marca[cont]) {
+                retorno = marca[cont];
+            }
+            if (campoDeTablero[6] == marca[cont] && campoDeTablero[4] == marca[cont] && campoDeTablero[2] ==marca[cont]) {
+                retorno = marca[cont];
+            }
+            cont++;
         }
         return retorno;
     }
-    
+
     //metodo que imprime en pantalla el metodo actual
-    public String escribirElJugadorActual(int dato){
+    public String escribirElJugadorActual(int dato) {
         String retorno = "";
         if (dato == 1) {
             retorno = "Juega el primer jugador";
@@ -135,23 +109,23 @@ public class Tablero {
         if (dato == 2) {
             retorno = "Juega el segundo jugador";
         }
-        System.err.println(retorno);
+        //System.err.println(retorno);
         return retorno;
     }
-    
+
     //metodo que en vase a lo que no dice el metodo verificadorDePosicionOcupada 
     //imprimira en pantalla el metodo correspondiente
-    public String escribirPosicionOcupadaDesocupada(boolean dato){
+    public String escribirPosicionOcupadaDesocupada(boolean dato) {
         String retorno = "";
         if (dato) {
             retorno = "La posicion elegida esta ocupada";
         }
-        System.err.println(retorno);
+        //System.err.println(retorno);
         return retorno;
     }
-    
+
     //metodo que imprime en pantalla el jugador ganador
-    public String escribirJugadorGanador(String dato){
+    public String escribirJugadorGanador(String dato) {
         String retorno = "";
         if (dato == "JD1") {
             retorno = "Gano el jugador 1";
@@ -159,7 +133,7 @@ public class Tablero {
         if (dato == "JD2") {
             retorno = "Gano el jugador 2";
         }
-        System.err.println(retorno);
+        //System.err.println(retorno);
         return retorno;
     }
 

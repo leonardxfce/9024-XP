@@ -11,7 +11,7 @@ public class Sample {
     public String conexionEjemplo() {
         Connection connection = null;
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:pepitoxd.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:sample.db");
             Statement statement = connection.createStatement();
             statement.executeUpdate("drop table if exists person");
             statement.executeUpdate("create table person (id integer, name string)");

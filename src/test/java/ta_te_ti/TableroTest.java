@@ -6,7 +6,6 @@
 package ta_te_ti;
 
 import junit.framework.TestCase;
-import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 /**
@@ -196,6 +195,25 @@ public class TableroTest extends TestCase {
         instance.marcaDeCadaJugadorEnTablero(0);
         instance.marcaDeCadaJugadorEnTablero(1);
         instance.marcaDeCadaJugadorEnTablero(2);
+        //y se verifica el metodo
+        String expResult = "J2";
+        String result = instance.lineaCompletada();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+    }
+    @Test
+    public void testLineaCompletada04() {
+        System.out.println("lineaCompletada03");
+        Tablero instance = new Tablero();
+        //se eligen tres posiciones por el jugador dos
+        instance.marcaDeCadaJugadorEnTablero(0);
+        instance.marcaDeCadaJugadorEnTablero(1);
+        instance.marcaDeCadaJugadorEnTablero(8);
+        instance.cambioDeJugador();
+        instance.marcaDeCadaJugadorEnTablero(3);
+        instance.marcaDeCadaJugadorEnTablero(4);
+        instance.marcaDeCadaJugadorEnTablero(5);
         //y se verifica el metodo
         String expResult = "J2";
         String result = instance.lineaCompletada();

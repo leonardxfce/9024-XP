@@ -3,14 +3,13 @@ package ahorcado;
 import java.util.ArrayList;
 
 public class Ahorcado {
-    String palabras;
+    public String palabra;
     int letraRestantes;
     int vidas;
     ArrayList<String> conjuntoDePalabra = new ArrayList<>();
 
     public Ahorcado() {
-        this.palabras = "buho";
-        this.letraRestantes = palabras.length();
+        this.letraRestantes = 0;
         this.vidas = 3;
         this.conjuntoDePalabra.add("buho");
         this.conjuntoDePalabra.add("casa");
@@ -21,16 +20,16 @@ public class Ahorcado {
     String elegirPalabra () {
         int tamano = this.conjuntoDePalabra.size()-1;
         int indice = (int) (Math.random()*tamano);
-        String palabra=this.conjuntoDePalabra.get(indice);
+        String palabraElegida=this.conjuntoDePalabra.get(indice);
         this.conjuntoDePalabra.remove(indice);
-        return palabra;
+        return palabraElegida;
     }
 
     boolean  comprobarLetra(char letra ) {
         boolean z=false;
         
-        for (int i=0 ; i< this.palabras.length() ; i++){
-            if (palabras.charAt(i) == letra){
+        for (int i=0 ; i< this.palabra.length() ; i++){
+            if (palabra.charAt(i) == letra){
                 z=true;
                 this.letraRestantes --; 
             }
@@ -50,6 +49,7 @@ public class Ahorcado {
             this.vidas -- ;
         }
         return this.vidas;
+        
     }
     /*String comprobarVidas (){
         String estado;

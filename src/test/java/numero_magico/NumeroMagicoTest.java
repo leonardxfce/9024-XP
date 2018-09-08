@@ -10,26 +10,7 @@ public class NumeroMagicoTest extends TestCase {
         int result2 = nm.crearNumeroMagico();
         assertFalse(result == result2);
     }
-    public void testCompararNumeros(){
-        NumeroMagico nm = new NumeroMagico();
-        int numUsuario = -1 ;
-        String result = nm.compararNumeros(numUsuario);
-        assertEquals(result, "MAYOR");
-    }
-    public void testCompararNumeros102(){
-        NumeroMagico nm = new NumeroMagico();
-        int numUsuario = 102 ;
-        String result = nm.compararNumeros(numUsuario);
-        assertEquals(result, "MENOR");
-    }
-    public void testCompararNumeroigual(){
-        NumeroMagico nm = new NumeroMagico();
-        int numUsuario = 70 ;
-        System.out.println("El numero del usuario es"+numUsuario);
-        String result = nm.compararNumeros(numUsuario);
-        System.out.println("el numero aleatorio es");
-        assertEquals(result,"IGUAL");
-    }
+    
    public void test10vidas(){
        Jugador jug = new Jugador();
         Object result = jug.getVidas();
@@ -41,5 +22,12 @@ public class NumeroMagicoTest extends TestCase {
         Object result = jug.getVidas();
        assertEquals(9,result);
    }
-   
+   public void testConeccion(){
+       baseDeDatos instance = new baseDeDatos();
+        int vidas = 3;
+        int result = instance.conexionEjemplo(vidas);
+        int expected = 0;
+        System.out.print("Test Se comecta a la BD");
+        assertEquals(result,expected);
+   }
 }

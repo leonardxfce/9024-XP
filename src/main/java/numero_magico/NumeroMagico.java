@@ -2,24 +2,21 @@ package numero_magico;
 
 public class NumeroMagico {
 
+    int numMagico;
+
     int crearNumeroMagico() {
-        int coso = (int) (Math.random() * 100) + 1;
-        System.out.println("este es el numero"+coso);
-        return coso;
+        this.numMagico = (int) (Math.random() * 100) + 1;
+        return numMagico;
     }
 
     String compararNumeros(int numUsuario) {
-        int NumeroMagico = 70;
-        System.out.println("El numero aleatorio es"+NumeroMagico);
-        if (numUsuario<NumeroMagico){
-        return "MAYOR";
+        if (numUsuario < numMagico) {
+            return "Mayor";
+        } else if (numUsuario == numMagico) {
+            return "Igual";
+        } else {
+            return "Menor";
         }
-        else if (numUsuario == NumeroMagico) {
-            return "IGUAL";
-        }
-        else{
-        return "MENOR";
-                }
     }
-     
+
 }

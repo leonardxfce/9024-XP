@@ -8,7 +8,7 @@ public class AhorcadoTest extends TestCase {
     public void testAhorcado1() {
         Ahorcado instance = new Ahorcado();
         instance.palabra="buho";
-        instance.letraRestantes=4;
+        instance.letrasRestantes=instance.palabra.length();
         boolean result = instance.comprobarLetra('b');
         assertEquals(result, true);
     }
@@ -17,7 +17,7 @@ public class AhorcadoTest extends TestCase {
     public void testAhorcado2() {
         Ahorcado instance = new Ahorcado();
         instance.palabra="buho";
-        instance.letraRestantes=4;
+        instance.letrasRestantes=instance.palabra.length();
         boolean result = instance.comprobarLetra('u');
         assertEquals(result, true);
     }
@@ -25,7 +25,7 @@ public class AhorcadoTest extends TestCase {
     public void testAhorcado3() {
         Ahorcado instance = new Ahorcado();
         instance.palabra="buho";
-        instance.letraRestantes=4;
+        instance.letrasRestantes=instance.palabra.length();
         boolean result = instance.comprobarLetra('h');
         assertEquals(result, true);
     }
@@ -33,7 +33,7 @@ public class AhorcadoTest extends TestCase {
     public void testAhorcado4() {
         Ahorcado instance = new Ahorcado();
         instance.palabra="buho";
-        instance.letraRestantes=4;
+        instance.letrasRestantes=instance.palabra.length();
         boolean result = instance.comprobarLetra('o');
         assertEquals(result, true);
     }
@@ -41,7 +41,7 @@ public class AhorcadoTest extends TestCase {
     public void testAhorcado5() {
         Ahorcado instance = new Ahorcado();
         instance.palabra="buho";
-        instance.letraRestantes=4;
+        instance.letrasRestantes=instance.palabra.length();
         boolean result = instance.comprobarLetra('z');
         assertEquals(result, false);
     }
@@ -49,7 +49,7 @@ public class AhorcadoTest extends TestCase {
     public void testAhorcado6() {
         Ahorcado instance = new Ahorcado();
         instance.palabra="buho";
-        instance.letraRestantes=4;
+        instance.letrasRestantes=instance.palabra.length();
         instance.comprobarLetra('b');
         instance.comprobarLetra('u');
         instance.comprobarLetra('h');
@@ -61,30 +61,154 @@ public class AhorcadoTest extends TestCase {
     public void testAhorcado7() {
         Ahorcado instance = new Ahorcado();
         instance.palabra="buho";
-        instance.letraRestantes=4;
+        instance.letrasRestantes=instance.palabra.length();
         Jugador jugador = new Jugador();
         boolean comprobar = instance.comprobarLetra('z');
-        int result = instance.vidasRestantes(comprobar);
-        assertEquals(result , 2);
+        jugador.restarVida(comprobar);
+        assertEquals(jugador.vidas , 2);
     }
     public void testAhorcado8() {
         Ahorcado instance = new Ahorcado();
         instance.palabra="buho";
-        instance.letraRestantes=4;
+        instance.letrasRestantes=instance.palabra.length();
         Jugador jugador = new Jugador();
         boolean comprobar = instance.comprobarLetra('u');
-        int result = instance.vidasRestantes(comprobar);
-        assertEquals(result , 3);
+        jugador.restarVida(comprobar);
+        assertEquals(jugador.vidas , 3);
     }
     
     public void testAhorcado9 () {
         Ahorcado instance = new Ahorcado();
         instance.palabra="buho";
-        instance.letraRestantes=4;
+        instance.letrasRestantes=instance.palabra.length();
         String result=instance.elegirPalabra();
         String resultado = instance.elegirPalabra();
         assertTrue (result != resultado);
     }
+    public void testAhorcado10() {
+        Ahorcado instance = new Ahorcado();
+        Jugador jugador = new Jugador();
+        instance.palabra = "buho";
+        instance.letrasRestantes = instance.palabra.length();
+        jugador.restarVida(instance.comprobarLetra('q'));
+        jugador.restarVida(instance.comprobarLetra('a'));
+        jugador.restarVida(instance.comprobarLetra('l'));
+        assertEquals(jugador.vidas, 0);
+    }
+
     
+    public void testAhorcado11() {
+        Ahorcado instance = new Ahorcado();
+        Jugador jugador = new Jugador();
+        instance.palabra = "buho";
+        instance.letrasRestantes = instance.palabra.length();
+        jugador.restarVida(instance.comprobarLetra('b'));
+        jugador.restarVida(instance.comprobarLetra('u'));
+        jugador.restarVida(instance.comprobarLetra('l'));
+        assertEquals(jugador.vidas, 2);
+    }
+
+    
+    public void testAhorcado12() {
+        Ahorcado instance = new Ahorcado();
+        Jugador jugador = new Jugador();
+        instance.palabra = instance.conjuntoDePalabra.get(0);
+        instance.letrasRestantes = instance.palabra.length();
+        jugador.restarVida(instance.comprobarLetra('b'));
+        jugador.restarVida(instance.comprobarLetra('u'));
+        jugador.restarVida(instance.comprobarLetra('h'));
+        jugador.restarVida(instance.comprobarLetra('o'));
+        instance.conjuntoDePalabra.remove(0);
+        instance.palabra = instance.conjuntoDePalabra.get(0);
+        instance.letrasRestantes = instance.palabra.length();
+        jugador.restarVida(instance.comprobarLetra('c'));
+        jugador.restarVida(instance.comprobarLetra('a'));
+        jugador.restarVida(instance.comprobarLetra('s'));
+        jugador.restarVida(instance.comprobarLetra('o'));
+        instance.conjuntoDePalabra.remove(0);
+        instance.palabra = instance.conjuntoDePalabra.get(0);
+        instance.letrasRestantes = instance.palabra.length();
+        jugador.restarVida(instance.comprobarLetra('a'));
+        jugador.restarVida(instance.comprobarLetra('u'));
+        jugador.restarVida(instance.comprobarLetra('t'));
+        jugador.restarVida(instance.comprobarLetra('o'));
+        instance.conjuntoDePalabra.remove(0);
+        instance.palabra = instance.conjuntoDePalabra.get(0);
+        instance.letrasRestantes = instance.palabra.length();
+        jugador.restarVida(instance.comprobarLetra('g'));
+        jugador.restarVida(instance.comprobarLetra('a'));
+        jugador.restarVida(instance.comprobarLetra('t'));
+        jugador.restarVida(instance.comprobarLetra('o'));
+        instance.conjuntoDePalabra.remove(0);
+        assertEquals(instance.conjuntoDePalabra.isEmpty(), true);
+        assertEquals(jugador.vidas, 3);
+    }
+
+   
+    public void testAhorcado13() {
+        Ahorcado instance = new Ahorcado();
+        Jugador jugador = new Jugador();
+        instance.palabra = instance.conjuntoDePalabra.get(0);
+        instance.letrasRestantes = instance.palabra.length();
+        jugador.restarVida(instance.comprobarLetra('b'));
+        jugador.restarVida(instance.comprobarLetra('u'));
+        jugador.restarVida(instance.comprobarLetra('h'));
+        jugador.restarVida(instance.comprobarLetra('o'));
+        instance.conjuntoDePalabra.remove(0);
+        instance.palabra = instance.conjuntoDePalabra.get(0);
+        instance.letrasRestantes = instance.palabra.length();
+        jugador.restarVida(instance.comprobarLetra('c'));
+        jugador.restarVida(instance.comprobarLetra('a'));
+        jugador.restarVida(instance.comprobarLetra('w'));
+        jugador.restarVida(instance.comprobarLetra('s'));
+        jugador.restarVida(instance.comprobarLetra('o'));
+        instance.conjuntoDePalabra.remove(0);
+        instance.palabra = instance.conjuntoDePalabra.get(0);
+        instance.letrasRestantes = instance.palabra.length();
+        jugador.restarVida(instance.comprobarLetra('a'));
+        jugador.restarVida(instance.comprobarLetra('u'));
+        jugador.restarVida(instance.comprobarLetra('t'));
+        jugador.restarVida(instance.comprobarLetra('o'));
+        instance.conjuntoDePalabra.remove(0);
+        instance.palabra = instance.conjuntoDePalabra.get(0);
+        instance.letrasRestantes = instance.palabra.length();
+        jugador.restarVida(instance.comprobarLetra('g'));
+        jugador.restarVida(instance.comprobarLetra('a'));
+        jugador.restarVida(instance.comprobarLetra('t'));
+        jugador.restarVida(instance.comprobarLetra('o'));
+        instance.conjuntoDePalabra.remove(0);
+        assertEquals(instance.conjuntoDePalabra.isEmpty(), true);
+        assertEquals(jugador.vidas, 2);
+    }
+
+    public void testAhorcado14() {
+        Ahorcado instance = new Ahorcado();
+        Jugador jugador = new Jugador();
+        instance.palabra = instance.conjuntoDePalabra.get(0);
+        instance.letrasRestantes = instance.palabra.length();
+        jugador.restarVida(instance.comprobarLetra('b'));
+        jugador.restarVida(instance.comprobarLetra('u'));
+        jugador.restarVida(instance.comprobarLetra('h'));
+        jugador.restarVida(instance.comprobarLetra('o'));
+        instance.conjuntoDePalabra.remove(0);
+        instance.palabra = instance.conjuntoDePalabra.get(0);
+        instance.letrasRestantes = instance.palabra.length();
+        jugador.restarVida(instance.comprobarLetra('c'));
+        jugador.restarVida(instance.comprobarLetra('a'));
+        jugador.restarVida(instance.comprobarLetra('w'));
+        jugador.restarVida(instance.comprobarLetra('s'));
+        jugador.restarVida(instance.comprobarLetra('o'));
+        instance.conjuntoDePalabra.remove(0);
+        instance.palabra = instance.conjuntoDePalabra.get(0);
+        instance.letrasRestantes = instance.palabra.length();
+        jugador.restarVida(instance.comprobarLetra('a'));
+        jugador.restarVida(instance.comprobarLetra('u'));
+        jugador.restarVida(instance.comprobarLetra('t'));
+        jugador.restarVida(instance.comprobarLetra('o'));
+        jugador.restarVida(instance.comprobarLetra('z'));
+        instance.conjuntoDePalabra.remove(0);
+        assertEquals(instance.conjuntoDePalabra.isEmpty(), false);
+        assertEquals(jugador.vidas, 1);
+    }
 }
    

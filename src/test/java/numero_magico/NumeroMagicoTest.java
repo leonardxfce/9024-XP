@@ -22,12 +22,5 @@ public class NumeroMagicoTest extends TestCase {
         Object result = jug.getVidas();
        assertEquals(9,result);
    }
-   public void testConeccion(){
-       baseDeDatos instance = new baseDeDatos();
-        int vidas = 3;
-        int result = instance.conexionEjemplo(vidas);
-        int expected = 0;
-        System.out.print("Test Se comecta a la BD");
-        assertEquals(result,expected);
-   }
+   
 }

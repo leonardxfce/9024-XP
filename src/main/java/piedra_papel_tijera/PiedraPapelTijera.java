@@ -20,37 +20,41 @@ public class PiedraPapelTijera {
         Scanner leer = new Scanner(System.in);
         String dato;
         int numA;
+        int puntos= 0;
         System.out.println("******** PIEDRA, PAPEL O TIJERA ********");
-        System.out.println("Ingrese su opción: ");
-        dato = leer.nextLine();
+        
+        Usuario c = new Usuario();
         JugadaComputadora nuevaJugada = new JugadaComputadora();
-        numA = nuevaJugada.aleatorio();
+        
         ComprobarJugada comp = new ComprobarJugada();
-        //String resultado []= new String [3];
-        String resultado = comp.comprobar(numA, dato);
-        String resultado1 = comp.computadoraResult(numA);
-        System.out.println(resultado1);
-        System.out.println("Usted "+ resultado);
-        /*for(int i = 0; i < 3; i++){
+        
+        int rastrear;
+        String result;
+        String resultFinal = "";
+        for(int i=0; i<3; i++){
+            numA = nuevaJugada.aleatorio();
             System.out.println("Ingrese su opción: ");
             dato = leer.nextLine();
-            numA = nuevaJugada.Aleatorio();
-            System.out.println("jugada de la computadora: "+numA);
-            resultado[i]= comp.comprobar(numA, dato);
-        }
-        int resultDefinitivo = 0;
-        for(int j = 0; j<3;j++){
-            if(resultado[0]==resultado[1]){
-                resultDefinitivo =resultDefinitivo + 0;
-            }else{
-                resultDefinitivo = resultDefinitivo + 1;
+            String resultado1 = comp.computadoraResult(numA);
+            System.out.println(resultado1);
+            result = comp.comprobar(numA,dato);
+            System.out.println("Usted "+ result);
+            if(result=="gano"){
+                puntos ++;
             }
+            rastrear = c.quitarVidas(i);
+            System.out.println("vidas = "+ rastrear);
         }
-        if(resultDefinitivo>=1){
-            System.out.println("Usted Ganó");
+        System.out.println("Tiene "+puntos+" puntos");
+        if(puntos>= 2){
+            resultFinal = "gano";
         }else{
-            System.out.println("Usted Perdió");
-        }*/
+            resultFinal = "perdio";
+        }
+        System.out.println("RESULTADO FINAL: "+resultFinal );
+        
+        BaseDeDatos nuevo = new BaseDeDatos();
+        nuevo.conexionEjemplo(puntos);
     }
     
 }

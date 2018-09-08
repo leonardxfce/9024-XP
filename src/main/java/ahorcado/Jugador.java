@@ -15,5 +15,20 @@ public class Jugador {
          String letra = read.next();
          return letra;
     }
+    
+    void restarVida(boolean z) {
+
+        if (z == false) {
+            this.vidas--;
+        }
+    }
+
+    boolean comprobarVidas() {
+        boolean estado = true;
+        if (this.vidas == 0) {
+            estado = false;
+        }
+        return estado;
+    }
 
 }

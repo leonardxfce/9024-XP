@@ -3,59 +3,57 @@ package ahorcado;
 import java.util.ArrayList;
 
 public class Ahorcado {
+
     public String palabra;
-    int letraRestantes;
-    int vidas;
+    int letrasRestantes;
     ArrayList<String> conjuntoDePalabra = new ArrayList<>();
+    char[] vectorDeChar = new char[4];
 
     public Ahorcado() {
-        this.letraRestantes = 0;
-        this.vidas = 3;
+        this.letrasRestantes = 0;
         this.conjuntoDePalabra.add("buho");
-        this.conjuntoDePalabra.add("casa");
+        this.conjuntoDePalabra.add("caso");
         this.conjuntoDePalabra.add("auto");
         this.conjuntoDePalabra.add("gato");
     }
-    
-    String elegirPalabra () {
-        int tamano = this.conjuntoDePalabra.size()-1;
-        int indice = (int) (Math.random()*tamano);
-        String palabraElegida=this.conjuntoDePalabra.get(indice);
+
+    String elegirPalabra() {
+        int tamano = this.conjuntoDePalabra.size() - 1;
+        int indice = (int) (Math.random() * tamano);
+        String palabraElegida = this.conjuntoDePalabra.get(indice);
         this.conjuntoDePalabra.remove(indice);
         return palabraElegida;
     }
 
-    boolean  comprobarLetra(char letra ) {
-        boolean z=false;
-        
-        for (int i=0 ; i< this.palabra.length() ; i++){
-            if (palabra.charAt(i) == letra){
-                z=true;
-                this.letraRestantes --; 
+    boolean comprobarLetra(char letra) {
+        boolean z = false;
+
+        for (int i = 0; i < this.palabra.length(); i++) {
+            if (palabra.charAt(i) == letra) {
+                z = true;
+                this.letrasRestantes--;
+                this.vectorDeChar[i] = letra;
             }
         }
         return z;
     }
-    boolean adivinoLaPalabra(){
-        boolean z=false;
-        if (this.letraRestantes==0){
-        z=true;
+
+    boolean adivinoLaPalabra() {
+        boolean z = false;
+        if (this.letrasRestantes == 0) {
+            z = true;
         }
         return z;
     }
-        int vidasRestantes(boolean z){
-        boolean vida = true;
-        if (z == false){
-            this.vidas -- ;
+
+    String mostrarJuego(String palabra) {
+        String acumulador = "";
+        for (int i = 0; i < palabra.length(); i++) {
+            
+                acumulador += "_ ";
+            
         }
-        return this.vidas;
-        
+        return acumulador;
     }
-    /*String comprobarVidas (){
-        String estado;
-        if (this.vidas == 0 ){
-            estado = "Perdiste";
-        }
-        return estado;
-    }*/
+
 }

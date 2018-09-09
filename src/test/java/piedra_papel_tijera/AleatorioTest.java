@@ -15,7 +15,13 @@ import junit.framework.TestCase;
  * @author caro_
  */
 public class AleatorioTest extends TestCase {
-
+    
+    public void testJugadaComputadora(){
+        JugadaComputadora jugada = new JugadaComputadora();
+        int resultado = jugada.aleatorio();
+        int expectativa []={0,1,2} ;
+        assertEquals(expectativa[resultado],resultado);
+    }
     public void testAleatorio03() {
 
         String dato = "tijera";
@@ -119,9 +125,31 @@ public class AleatorioTest extends TestCase {
         }
         assertEquals(resultFinal, "gano");
     }
+    public void testJugarTresVecesYPerderRestandoVidas(){
+        String datoUsuario[]= {"papel","tijera","piedra"};
+        ComprobarJugada a = new ComprobarJugada();
+        Usuario c = new Usuario();
+        int b= 0;
+        int rastrear;
+        String result;
+        String resultFinal = "";
+        for(int i=0; i<3; i++){
+            result = a.comprobar(i,datoUsuario[i]);
+            if(result=="gano"){
+                b ++;
+            }
+            rastrear = c.quitarVidas(i);
+            System.out.println("vidas = "+ rastrear);
+        }
+        if(b>= 2){
+            resultFinal = "gano";
+        }else{
+            resultFinal = "perdio";
+        }
+        assertEquals(resultFinal, "perdio");
+    }
     
-    
-     public void test_de_ejemplo() {
+    public void testBaseDeDatos() {
         int ejemplo=2;
         BaseDeDatos instance = new BaseDeDatos();
         String result = instance.conexionEjemplo(ejemplo);

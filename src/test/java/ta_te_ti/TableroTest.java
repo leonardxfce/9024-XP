@@ -269,7 +269,7 @@ public class TableroTest extends TestCase {
         System.out.println("escribirJugadorGanador01");
         Tablero instance = new Tablero();
         String expResult = "Gano el jugador 1";
-        String result = instance.escribirJugadorGanador("JD1");
+        String result = instance.escribirJugadorGanador("J1");
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -279,7 +279,7 @@ public class TableroTest extends TestCase {
         System.out.println("escribirJugadorGanador01");
         Tablero instance = new Tablero();
         String expResult = "Gano el jugador 2";
-        String result = instance.escribirJugadorGanador("JD2");
+        String result = instance.escribirJugadorGanador("J2");
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");

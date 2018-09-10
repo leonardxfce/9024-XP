@@ -11,7 +11,7 @@ package ta_te_ti;
  */
 public class Tablero {
 
-    String[] campoDeTablero = new String[9];
+    String[] campoDeTablero = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
     String marca[] = {"J1", "J2"};
     boolean banderaPosicionOcupada;
     int jugador = 1;
@@ -24,10 +24,11 @@ public class Tablero {
     //en este metodo se verifica si la posicion elegida esta marcada
     public boolean verificadorDePosicionOcupada(int posicionIngresadoPorJugador) {
         String contenidoPosicionTablero = campoDeTablero[posicionIngresadoPorJugador];
-        if (contenidoPosicionTablero == null) {
-            
+        String valorDelTablero = Integer.toString(posicionIngresadoPorJugador + 1);
+        if (contenidoPosicionTablero.equals(valorDelTablero)) {
+            banderaPosicionOcupada = false;
         } else {
-            if (contenidoPosicionTablero.equals("J1")||(contenidoPosicionTablero.equals("J2"))) {
+            if (contenidoPosicionTablero.equals("J1") || (contenidoPosicionTablero.equals("J2"))) {
                 banderaPosicionOcupada = true;
             }
         }
@@ -92,7 +93,7 @@ public class Tablero {
             if (campoDeTablero[0] == marca[cont] && campoDeTablero[4] == marca[cont] && campoDeTablero[8] == marca[cont]) {
                 retorno = marca[cont];
             }
-            if (campoDeTablero[6] == marca[cont] && campoDeTablero[4] == marca[cont] && campoDeTablero[2] ==marca[cont]) {
+            if (campoDeTablero[6] == marca[cont] && campoDeTablero[4] == marca[cont] && campoDeTablero[2] == marca[cont]) {
                 retorno = marca[cont];
             }
             cont++;
@@ -109,7 +110,7 @@ public class Tablero {
         if (dato == 2) {
             retorno = "Juega el segundo jugador";
         }
-        //System.err.println(retorno);
+        System.err.println(retorno);
         return retorno;
     }
 
@@ -120,21 +121,39 @@ public class Tablero {
         if (dato) {
             retorno = "La posicion elegida esta ocupada";
         }
-        //System.err.println(retorno);
+        System.err.println(retorno);
         return retorno;
     }
 
     //metodo que imprime en pantalla el jugador ganador
     public String escribirJugadorGanador(String dato) {
         String retorno = "";
-        if (dato == "JD1") {
+        if (dato == "J1") {
             retorno = "Gano el jugador 1";
         }
-        if (dato == "JD2") {
+        if (dato == "J2") {
             retorno = "Gano el jugador 2";
         }
-        //System.err.println(retorno);
+        System.err.println(retorno);
         return retorno;
+    }
+    
+    //metodo que muestra el tablero en la consola
+    public void tablero(){
+        System.err.println("----------------------------------");
+        System.err.println("|          |          |          |");
+        System.err.println("|    " + campoDeTablero[0] + "    |    " + campoDeTablero[1] + "    |    " + campoDeTablero[2] + "    |");
+        System.err.println("|          |          |          |");
+        System.err.println("----------------------------------");
+        System.err.println("|          |          |          |");
+        System.err.println("|    " + campoDeTablero[3] + "    |    " + campoDeTablero[4] + "    |    " + campoDeTablero[5] + "    |");
+        System.err.println("|          |          |          |");
+        System.err.println("----------------------------------");
+        System.err.println("|          |          |          |");
+        System.err.println("|    " + campoDeTablero[6] + "    |    " + campoDeTablero[7] + "    |    " + campoDeTablero[8] + "    |");
+        System.err.println("|          |          |          |");
+        System.err.println("----------------------------------");
+        
     }
 
 }

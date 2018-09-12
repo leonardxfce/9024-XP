@@ -22,7 +22,7 @@ public class InicioPiedraPapelTijera {
         String dato;
         int numA;
         int puntos= 0;
-        System.out.println("******** PIEDRA, PAPEL O TIJERA ********");
+        logger.debug("******** PIEDRA, PAPEL O TIJERA ********");
         
         Usuario c = new Usuario();
         JugadaComputadora nuevaJugada = new JugadaComputadora();
@@ -34,25 +34,25 @@ public class InicioPiedraPapelTijera {
         String resultFinal = "";
         for(int i=0; i<3; i++){
             numA = nuevaJugada.aleatorio();
-            System.out.println("Ingrese su opción: ");
+            logger.debug("Ingrese su opción: ");
             dato = leer.nextLine();
             String resultado1 = comp.computadoraResult(numA);
-            System.out.println(resultado1);
+            logger.debug(resultado1);
             result = comp.comprobar(numA,dato);
-            System.out.println("Usted "+ result);
+            logger.debug("Usted "+ result);
             if(result=="gano"){
                 puntos ++;
             }
             rastrear = c.quitarVidas(i);
-            System.out.println("vidas = "+ rastrear);
+            logger.debug("vidas = "+ rastrear);
         }
-        System.out.println("Tiene "+puntos+" puntos");
+        logger.debug("Tiene "+puntos+" puntos");
         if(puntos>= 2){
             resultFinal = "gano";
         }else{
             resultFinal = "perdio";
         }
-        System.out.println("RESULTADO FINAL: "+resultFinal );
+        logger.debug("RESULTADO FINAL: "+resultFinal );
         
         BaseDeDatos nuevo = new BaseDeDatos();
         nuevo.conexionEjemplo(puntos);

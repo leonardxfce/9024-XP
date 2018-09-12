@@ -6,17 +6,18 @@
 package piedra_papel_tijera;
 
 import java.util.Scanner;
+import org.apache.log4j.Logger;
 
 /**
  *
  * @author caro_
  */
-public class PiedraPapelTijera {
+public class InicioPiedraPapelTijera {
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public void jugar(Logger logger) {
         Scanner leer = new Scanner(System.in);
         String dato;
         int numA;

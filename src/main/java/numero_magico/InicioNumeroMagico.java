@@ -6,14 +6,15 @@
 package numero_magico;
 
 import java.util.Scanner;
+import org.apache.log4j.Logger;
 
 /**
  *
  * @author lautaro
  */
-public class Inicio {
+public class InicioNumeroMagico {
 
-    public static void main(String[] args) {
+    public void jugar(Logger logger) {
 
         NumeroMagico numM = new NumeroMagico(); //llamamos la clase numMagicos
         numM.crearNumeroMagico();//llama al metodo que crea el numero magico
@@ -38,7 +39,7 @@ public class Inicio {
         System.out.println("El juego a terminado :D");
         baseDeDatos obj = new baseDeDatos();
         obj.conexionEjemplo(vidas);
-        
+
     }
     
 

@@ -1,8 +1,10 @@
 package ahorcado;
 
-public class JuegoAhorcado {
+import org.apache.log4j.Logger;
 
-    public static void main(String[] args) {
+public class InicioAhorcado {
+
+    public void jugar(Logger logger) {
 
         Ahorcado ahorcado = new Ahorcado();
         Jugador jugador = new Jugador();

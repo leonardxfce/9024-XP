@@ -21,9 +21,11 @@ public class InicioPiedraPapelTijera {
         Scanner leer = new Scanner(System.in);
         String dato;
         int numA;
-        int puntos= 0;
+        int puntos = 0;
         logger.debug("******** PIEDRA, PAPEL O TIJERA ********");
-        
+        logger.debug("----------------REGLAS------------------");
+        logger.debug("#Ingresar todas las opciones(piedra,papel,tijera) en imprenta minuscula");
+        logger.debug("----------------------------------------");
         Usuario c = new Usuario();
         JugadaComputadora nuevaJugada = new JugadaComputadora();
         
@@ -32,27 +34,43 @@ public class InicioPiedraPapelTijera {
         int rastrear;
         String result;
         String resultFinal = "";
-        for(int i=0; i<3; i++){
+        boolean bandera = false;
+        String[] posibilidades = {"tijera", "piedra", "papel"};
+        for (int i = 0; i < 3; i++) {
             numA = nuevaJugada.aleatorio();
             logger.debug("Ingrese su opción: ");
             dato = leer.nextLine();
-            String resultado1 = comp.computadoraResult(numA);
-            logger.debug(resultado1);
-            result = comp.comprobar(numA,dato);
-            logger.debug("Usted "+ result);
-            if(result=="gano"){
-                puntos ++;
+            for (int j = 0; j < 3; j++) {
+                if (dato.equals(posibilidades[j])) {
+                    bandera = true;
+                }            
             }
-            rastrear = c.quitarVidas(i);
-            logger.debug("vidas = "+ rastrear);
-        }
-        logger.debug("Tiene "+puntos+" puntos");
-        if(puntos>= 2){
+            
+            if (bandera == true) {
+                String resultado1 = comp.computadoraResult(numA);
+                logger.debug(resultado1);
+                result = comp.comprobar(numA, dato);
+                logger.debug("Usted " + result);
+                
+                if (result == "gano") {
+                    puntos++;
+                }
+                rastrear = c.quitarVidas(i);
+                logger.debug("vidas = " + rastrear);
+                bandera = false;
+            } else {
+                logger.debug("La opción ingresada es incorrecta");
+                i--;
+            }
+            logger.debug("*************************************");
+        }        
+        logger.debug("Tiene " + puntos + " puntos");
+        if (puntos >= 2) {
             resultFinal = "gano";
-        }else{
+        } else {
             resultFinal = "perdio";
         }
-        logger.debug("RESULTADO FINAL: "+resultFinal );
+        logger.debug("RESULTADO FINAL: " + resultFinal);
         
         BaseDeDatos nuevo = new BaseDeDatos();
         nuevo.conexionEjemplo(puntos);

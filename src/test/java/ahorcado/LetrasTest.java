@@ -41,11 +41,39 @@ public class LetrasTest extends TestCase {
 
     public void testLetraNuevamenteIngresada() {
         Ahorcado instance = new Ahorcado();
-        instance.palabra = instance.conjuntoDePalabras.get(0);
+        instance.palabra = instance.conjuntoDePalabras.get(2);
         instance.datosAhorcado();
         boolean presencia = instance.comprobarExistenciaDeLetra("b");
         boolean presencia1 = instance.comprobarExistenciaDeLetra("b");
+        assertEquals(true, presencia);
         assertEquals(false, presencia1);
+    }
+
+    public void testLetraNuevamenteIngresada2() {
+        Ahorcado instance = new Ahorcado();
+        instance.palabra = instance.conjuntoDePalabras.get(2);
+        instance.datosAhorcado();
+        boolean presencia = instance.comprobarExistenciaDeLetra("b");
+        boolean presencia1 = instance.comprobarExistenciaDeLetra("b");
+        boolean presencia2 = instance.comprobarExistenciaDeLetra("o");
+        boolean presencia3 = instance.comprobarExistenciaDeLetra("z");
+        boolean presencia4 = instance.comprobarExistenciaDeLetra("o");
+        assertEquals(true, presencia);
+        assertEquals(false, presencia1);
+        assertEquals(true, presencia2);
+        assertEquals(true, presencia3);
+        assertEquals(false, presencia4);
+    }
+
+    public void testLetraRepetida() {
+        Ahorcado instance = new Ahorcado();
+        instance.agregarPalabras();
+        int ind = instance.conjuntoDePalabras.indexOf("casa");
+        instance.palabra = instance.conjuntoDePalabras.get(ind);
+        instance.datosAhorcado();
+        instance.comprobarLetra('a');
+        String result = instance.mostrarJuego();
+        assertEquals(" _a _a", result);
     }
 
 }

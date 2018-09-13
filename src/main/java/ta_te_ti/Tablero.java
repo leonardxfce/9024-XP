@@ -113,6 +113,17 @@ public class Tablero {
         System.err.println(retorno);
         return retorno;
     }
+        public String escribirElJugadoVsPC(int dato) {
+        String retorno = "";
+        if (dato == 1) {
+            retorno = "Juega el primer jugador";
+        }
+        if (dato == 2) {
+            retorno = "Juega el segundo jugador";
+        }
+        System.err.println(retorno);
+        return retorno;
+    }
 
     //metodo que en vase a lo que no dice el metodo verificadorDePosicionOcupada 
     //imprimira en pantalla el metodo correspondiente

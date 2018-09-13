@@ -70,7 +70,7 @@ public class AhorcadoTest extends TestCase {
         Jugador jugador = new Jugador();
         boolean comprobar = instance.comprobarLetra('z');
         jugador.restarVida(comprobar);
-        assertEquals(jugador.vidas, 2);
+        assertEquals(jugador.vidas, 9);
     }
 
     public void testAhorcado8() {
@@ -81,7 +81,7 @@ public class AhorcadoTest extends TestCase {
         Jugador jugador = new Jugador();
         boolean comprobar = instance.comprobarLetra('u');
         jugador.restarVida(comprobar);
-        assertEquals(jugador.vidas, 3);
+        assertEquals(jugador.vidas, 10);
     }
 
     public void testAhorcado9() {
@@ -103,7 +103,7 @@ public class AhorcadoTest extends TestCase {
         jugador.restarVida(instance.comprobarLetra('q'));
         jugador.restarVida(instance.comprobarLetra('a'));
         jugador.restarVida(instance.comprobarLetra('l'));
-        assertEquals(jugador.vidas, 0);
+        assertEquals(jugador.vidas, 7);
     }
 
     public void testAhorcado11() {
@@ -115,7 +115,7 @@ public class AhorcadoTest extends TestCase {
         jugador.restarVida(instance.comprobarLetra('b'));
         jugador.restarVida(instance.comprobarLetra('u'));
         jugador.restarVida(instance.comprobarLetra('l'));
-        assertEquals(jugador.vidas, 2);
+        assertEquals(jugador.vidas, 9);
     }
 
     public void testAhorcado12() {
@@ -151,7 +151,7 @@ public class AhorcadoTest extends TestCase {
         jugador.restarVida(instance.comprobarLetra('o'));
         instance.conjuntoDePalabras.remove(0);
         assertEquals(instance.conjuntoDePalabras.isEmpty(), true);
-        assertEquals(jugador.vidas, 3);
+        assertEquals(jugador.vidas, 10);
     }
 
     public void testAhorcado13() {
@@ -188,7 +188,7 @@ public class AhorcadoTest extends TestCase {
         jugador.restarVida(instance.comprobarLetra('o'));
         instance.conjuntoDePalabras.remove(0);
         assertEquals(instance.conjuntoDePalabras.isEmpty(), true);
-        assertEquals(jugador.vidas, 2);
+        assertEquals(jugador.vidas, 9);
     }
 
     public void testAhorcado14() {
@@ -219,6 +219,6 @@ public class AhorcadoTest extends TestCase {
         jugador.restarVida(instance.comprobarLetra('z'));
         instance.conjuntoDePalabras.remove(0);
         assertEquals(instance.conjuntoDePalabras.isEmpty(), false);
-        assertEquals(jugador.vidas, 1);
+        assertEquals(jugador.vidas, 8);
     }
 }

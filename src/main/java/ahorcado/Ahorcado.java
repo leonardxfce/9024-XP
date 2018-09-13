@@ -27,12 +27,12 @@ public class Ahorcado {
     }
 
     void agregarPalabras() {
-        this.conjuntoDePalabras.add("casa");
         this.conjuntoDePalabras.add("papel");
+        this.conjuntoDePalabras.add("casa");
     }
 
     String elegirPalabra() {
-        int tamano = this.conjuntoDePalabras.size() - 1;
+        int tamano = this.conjuntoDePalabras.size();
         int indice = (int) (Math.random() * tamano);
         String palabraElegida = this.conjuntoDePalabras.get(indice);
         this.conjuntoDePalabras.remove(indice);
@@ -83,7 +83,7 @@ public class Ahorcado {
                 letrasIngresadas.remove(0);
             }
         }
-        if (noExiste == true) {
+        if (noExiste) {
             letrasIngresadas.add(b);
         }
         return noExiste;

@@ -9,7 +9,7 @@ public class Jugador {
     Scanner read = new Scanner(System.in);
 
     public Jugador() {
-        this.vidas = 3;
+        this.vidas = 10;
     }
 
     String ingresarLetra() {
@@ -18,7 +18,7 @@ public class Jugador {
     }
 
     void restarVida(boolean z) {
-        if (z == false) {
+        if (!z) {
             this.vidas--;
         }
     }

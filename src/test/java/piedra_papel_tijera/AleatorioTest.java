@@ -116,7 +116,7 @@ public class AleatorioTest extends TestCase {
                 b ++;
             }
             rastrear = c.quitarVidas(i);
-            System.out.println("vidas = "+ rastrear);
+           
         }
         if(b>= 2){
             resultFinal = "gano";
@@ -139,7 +139,7 @@ public class AleatorioTest extends TestCase {
                 b ++;
             }
             rastrear = c.quitarVidas(i);
-            System.out.println("vidas = "+ rastrear);
+            
         }
         if(b>= 2){
             resultFinal = "gano";
@@ -154,7 +154,7 @@ public class AleatorioTest extends TestCase {
         BaseDeDatos instance = new BaseDeDatos();
         String result = instance.conexionEjemplo(ejemplo);
         String expected = "usuario1";
-        System.out.print("Test Se conecta a la BD");
+        
         assertEquals(result,expected);
     }
 

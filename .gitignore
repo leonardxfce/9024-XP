@@ -52,5 +52,5 @@ nbdist/
 # End of https://www.gitignore.io/api/java,maven,netbeans
 .vscode/
 *.db
-*.iml
 .idea/
+*.iml

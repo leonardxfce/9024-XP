@@ -6,7 +6,6 @@
 package EnvaseFormulario;
 
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.stage.Stage;
 
@@ -16,10 +15,10 @@ import javafx.stage.Stage;
  */
 public class Controlador implements EventHandler<ActionEvent> {
 
-    ForEnvase formulario;
+    Vista formulario;
 
     public Controlador(Stage primaryStage) {
-        formulario = new ForEnvase();
+        formulario = new Vista();
         formulario.start(primaryStage);
         formulario.aceptar.setOnAction(this);
     }

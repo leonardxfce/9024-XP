@@ -1,8 +1,11 @@
 language: java
+os: linux
+dist: trusty
+jdk: oraclejdk8
+env:
+ - _JAVA_OPTIONS="-Djava.awt.headless=true -Dtestfx.robot=glass -Dtestfx.headless=true -Dprism.order=sw -Dprism.text=t2k -Dtestfx.setup.timeout=2500"
 script:
   - mvn clean test jacoco:report package sonar:sonar 
-jdk:
-  - oraclejdk8
 after_success:
   - mvn clean cobertura:cobertura coveralls:report
 sudo: false
@@ -11,8 +14,6 @@ addons:
     organization: "leonardxfce-github"
     token:
       secure: $SONAR_TOKEN
-env:
-    - _JAVA_OPTIONS="-Djava.awt.headless=true -Dtestfx.robot=glass -Dtestfx.headless=true -Dprism.order=sw -Dprism.text=t2k -Dtestfx.setup.timeout=2500"
 cache:
   directories:
     - '$HOME/.m2/repository'

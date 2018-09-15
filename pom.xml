@@ -14,6 +14,18 @@
     </properties>
     <dependencies>
         <dependency>
+            <groupId>org.testfx</groupId>
+            <artifactId>testfx-core</artifactId>
+            <version>4.0.1-alpha</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testfx</groupId>
+            <artifactId>testfx-junit</artifactId>
+            <version>4.0.1-alpha</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
@@ -87,13 +99,13 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>fx.EjemploFX</mainClass>
+                            <classpathPrefix>lib/</classpathPrefix>
+                            <mainClass>EnvaseFormulario.Inicio</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
             </plugin>
-                  <plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <executions>
@@ -106,7 +118,7 @@
                             <archive>
                                 <manifest>
                                     <mainClass>
-                                        fx.EjemploFX
+                                        EnvaseFormulario.Inicio
                                     </mainClass>
                                 </manifest>
                             </archive>

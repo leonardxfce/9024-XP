@@ -1,4 +1,6 @@
-package ejemplo_sqllite;
+package ejemplo_sqlite;
+
+import org.apache.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,8 +12,8 @@ public class EjemploSQLite {
     Connection connection;
     Statement statement;
     ResultSet rs;
-    
-    public String conexionEjemplo(String url) {    
+
+    public String conexionEjemplo(String url) {
         try {
             connection = DriverManager.getConnection(url);
             statement = connection.createStatement();
@@ -23,7 +25,8 @@ public class EjemploSQLite {
             rs.next();
             return rs.getString("name");
         } catch (Exception e) {
-            System.err.println(e.getMessage());
+            Logger logger = Logger.getLogger(EjemploSQLite.class);
+            logger.error(e.getMessage());
             return "fail";
         }
     }

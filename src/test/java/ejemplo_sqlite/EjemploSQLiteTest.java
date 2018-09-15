@@ -1,6 +1,5 @@
 package ejemplo_sqlite;
 
-import ejemplo_sqllite.EjemploSQLite;
 import junit.framework.TestCase;
 
 public class EjemploSQLiteTest extends TestCase {
@@ -9,13 +8,14 @@ public class EjemploSQLiteTest extends TestCase {
         EjemploSQLite instance = new EjemploSQLite();
         String result = instance.conexionEjemplo("jdbc:sqlite:sample.db");
         String expected = "leo";
-        assertEquals(result,expected);
+        assertEquals(result, expected);
     }
+
     public void test_falla_al_conectar() {
         EjemploSQLite instance = new EjemploSQLite();
         String result = instance.conexionEjemplo("pepito");
         String expected = "fail";
-        assertEquals(result,expected);
+        assertEquals(result, expected);
     }
 
 }

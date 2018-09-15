@@ -2,6 +2,8 @@ package ahorcado;
 
 import junit.framework.TestCase;
 
+import java.util.Scanner;
+
 public class AhorcadoTest extends TestCase {
 
     public void testAhorcado1() {
@@ -67,7 +69,7 @@ public class AhorcadoTest extends TestCase {
         instance.palabra = "buho";
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
-        Jugador jugador = new Jugador();
+        Scanner sc = new Scanner(System.in);Jugador jugador = new Jugador(sc);
         boolean comprobar = instance.comprobarLetra('z');
         jugador.restarVida(comprobar);
         assertEquals(jugador.vidas, 9);
@@ -78,7 +80,7 @@ public class AhorcadoTest extends TestCase {
         instance.palabra = "buho";
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
-        Jugador jugador = new Jugador();
+        Scanner sc = new Scanner(System.in);Jugador jugador = new Jugador(sc);
         boolean comprobar = instance.comprobarLetra('u');
         jugador.restarVida(comprobar);
         assertEquals(jugador.vidas, 10);
@@ -96,7 +98,7 @@ public class AhorcadoTest extends TestCase {
 
     public void testAhorcado10() {
         Ahorcado instance = new Ahorcado();
-        Jugador jugador = new Jugador();
+        Scanner sc = new Scanner(System.in);Jugador jugador = new Jugador(sc);
         instance.palabra = "buho";
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
@@ -108,7 +110,7 @@ public class AhorcadoTest extends TestCase {
 
     public void testAhorcado11() {
         Ahorcado instance = new Ahorcado();
-        Jugador jugador = new Jugador();
+        Scanner sc = new Scanner(System.in);Jugador jugador = new Jugador(sc);
         instance.palabra = "buho";
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
@@ -120,7 +122,7 @@ public class AhorcadoTest extends TestCase {
 
     public void testAhorcado12() {
         Ahorcado instance = new Ahorcado();
-        Jugador jugador = new Jugador();
+        Scanner sc = new Scanner(System.in);Jugador jugador = new Jugador(sc);
         instance.palabra = instance.conjuntoDePalabras.get(0);
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
@@ -156,7 +158,7 @@ public class AhorcadoTest extends TestCase {
 
     public void testAhorcado13() {
         Ahorcado instance = new Ahorcado();
-        Jugador jugador = new Jugador();
+        Scanner sc = new Scanner(System.in);Jugador jugador = new Jugador(sc);
         instance.palabra = instance.conjuntoDePalabras.get(0);
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
@@ -193,7 +195,7 @@ public class AhorcadoTest extends TestCase {
 
     public void testAhorcado14() {
         Ahorcado instance = new Ahorcado();
-        Jugador jugador = new Jugador();
+        Scanner sc = new Scanner(System.in);Jugador jugador = new Jugador(sc);
         instance.palabra = instance.conjuntoDePalabras.get(0);
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();

@@ -6,12 +6,12 @@ public class Jugador {
 
     String nombre;
     int vidas;
-    Scanner read = new Scanner(System.in);
+    Scanner read;
 
-    public Jugador() {
+    public Jugador(Scanner tecladoDelUsuario) {
+        this.read = tecladoDelUsuario;
         this.vidas = 10;
     }
-
     String ingresarLetra() {
         String letra = read.next();
         return letra;

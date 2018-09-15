@@ -1,4 +1,4 @@
-package EnvaseFormulario;
+package envase;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
@@ -14,13 +14,25 @@ import javafx.stage.Stage;
 
 public class Vista extends Application {
 
-    Button aceptar, cancelar;
+    Button aceptar;
+    Button cancelar;
     Scene scene;
     StackPane contenedor;
-    Label labelNom, labelCap, labelCant, labelEstado, labelProv;
-    TextField TextNom, TextCap, TextCant, TextEstado, TextProv;
-    VBox labels, texts, todo;
-    HBox botones, labelTexts;
+    Label labelNom;
+    Label labelCap;
+    Label labelCant;
+    Label labelEstado;
+    Label labelProv;
+    TextField textField;
+    TextField textCap;
+    TextField textCant;
+    TextField textEstado;
+    TextField textProv;
+    VBox labels;
+    VBox texts;
+    VBox todo;
+    HBox botones;
+    HBox labelTexts;
     Insets margenes;
 
     public Vista() {
@@ -31,11 +43,11 @@ public class Vista extends Application {
         labelCant = new Label("Cantidad");
         labelEstado = new Label("Estado");
         labelProv = new Label("Proveedor");
-        TextNom = new TextField();
-        TextCap = new TextField();
-        TextCant = new TextField();
-        TextEstado = new TextField();
-        TextProv = new TextField();
+        textField = new TextField();
+        textCap = new TextField();
+        textCant = new TextField();
+        textEstado = new TextField();
+        textProv = new TextField();
         aceptar = new Button("Aceptar");
         cancelar = new Button("Cancelar");
         labels = new VBox(10);
@@ -54,7 +66,7 @@ public class Vista extends Application {
         labels.setAlignment(Pos.TOP_LEFT);
         texts.setAlignment(Pos.TOP_LEFT);
         labels.getChildren().addAll(labelNom, labelCap, labelCant, labelEstado, labelProv);
-        texts.getChildren().addAll(TextNom, TextCap, TextCant, TextEstado, TextProv, cancelar);
+        texts.getChildren().addAll(textField, textCap, textCant, textEstado, textProv, cancelar);
         botones.getChildren().addAll(aceptar, cancelar);
         labelTexts.getChildren().addAll(labels, texts);
         todo.getChildren().addAll(labelTexts, botones);

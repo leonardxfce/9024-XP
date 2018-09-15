@@ -2,12 +2,14 @@ package ahorcado;
 
 import org.apache.log4j.Logger;
 
+import java.util.Scanner;
+
 public class InicioAhorcado {
 
-    public void jugar(Logger logger) {
+    public void jugar(Logger logger, Scanner tecladoDelUsuario) {
 
         Ahorcado ahorcado = new Ahorcado();
-        Jugador jugador = new Jugador();
+        Jugador jugador = new Jugador(tecladoDelUsuario);
         ahorcado.agregarPalabras();
 
         do {

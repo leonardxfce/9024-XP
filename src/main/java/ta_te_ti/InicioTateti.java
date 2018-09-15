@@ -5,8 +5,8 @@ import org.apache.log4j.Logger;
 
 public class InicioTateti {
 
-    public void jugar(Logger logger) {
-        Scanner tecla = new Scanner(System.in);
+    public void jugar(Logger logger,Scanner tecladoDelUsuario) {
+        Scanner tecla = tecladoDelUsuario;
         Tablero miTablero = new Tablero();
         int contador = 0;
         boolean bandera = false;

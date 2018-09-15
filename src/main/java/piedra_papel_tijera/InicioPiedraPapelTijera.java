@@ -17,8 +17,8 @@ public class InicioPiedraPapelTijera {
     /**
      * @param args the command line arguments
      */
-    public void jugar(Logger logger) {
-        Scanner leer = new Scanner(System.in);
+    public void jugar(Logger logger, Scanner tecladoDelUsuario) {
+        Scanner leer = tecladoDelUsuario;
         String dato;
         int numA;
         int puntos = 0;

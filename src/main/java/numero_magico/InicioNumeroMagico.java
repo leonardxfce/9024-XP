@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
  */
 public class InicioNumeroMagico {
 
-    public void jugar(Logger logger) {
+    public void jugar(Logger logger,Scanner tecladoUsuario) {
 
         NumeroMagico numM = new NumeroMagico(); //llamamos la clase numMagicos
         numM.crearNumeroMagico();//llama al metodo que crea el numero magico
@@ -27,7 +27,7 @@ public class InicioNumeroMagico {
             vidas = jugV.getVidas();
             jugV.quitarVida();
             System.out.println("Usted tiene un total de "+vidas+" vidas");
-            Scanner numUsuario = new Scanner(System.in);    //funcion q crea el scanner del NumUser
+            Scanner numUsuario = tecladoUsuario;    //funcion q crea el scanner del NumUser
             String userN = numUsuario.nextLine();   //leer Numero de Usuario = userN
             int userInt = Integer.parseInt(userN);  //Transforma el dato StringUser a Integer
 

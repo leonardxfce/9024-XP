@@ -3,29 +3,31 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EnvaseFormulario;
+package envase;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.stage.Stage;
+import org.apache.log4j.Logger;
 
 /**
- *
  * @author Lisa
  */
 public class Controlador implements EventHandler<ActionEvent> {
 
     Vista formulario;
+    Logger logger;
 
-    public Controlador(Stage primaryStage) {
+    Controlador(Stage primaryStage) {
         formulario = new Vista();
         formulario.start(primaryStage);
         formulario.aceptar.setOnAction(this);
+        logger = Logger.getLogger(Controlador.class);
     }
 
     @Override
-    public void handle(ActionEvent pepito) {
-        System.out.println("ME HICIERON CLICK");
+    public void handle(ActionEvent event) {
+        logger.debug("ME HICIERON CLICK");
     }
 
 }

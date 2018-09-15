@@ -1,4 +1,4 @@
-package EnvaseFormulario;
+package envase;
 
 import javafx.stage.Stage;
 import org.junit.Test;

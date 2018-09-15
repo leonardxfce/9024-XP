@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package EnvaseFormulario;
+package envase;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
 
 /**
- *
  * @author Lisa
  */
 public class Inicio extends Application {
@@ -19,6 +18,6 @@ public class Inicio extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Controlador c = new Controlador(primaryStage);
+        new Controlador(primaryStage);
     }
 }

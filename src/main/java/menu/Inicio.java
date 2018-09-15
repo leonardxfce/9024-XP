@@ -11,7 +11,7 @@ public class Inicio {
 
     public static void main(String[] args) {
         Logger logger = Logger.getLogger(Inicio.class);
-        Scanner numUsuario = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         int userN;
         do {
             logger.debug("---------------------------------------");
@@ -22,27 +22,27 @@ public class Inicio {
             logger.debug("3 - Piedra Papel Tijera");
             logger.debug("4 - Ahorcado");
             logger.debug("0 - Salir");
-            userN = numUsuario.nextInt();
-            chooseGame(userN, logger);
+            userN = scanner.nextInt();
+            chooseGame(userN, logger,scanner);
         } while (userN != 0);
     }
 
-    private static void chooseGame(int userN, Logger logger) {
+    private static void chooseGame(int userN, Logger logger,Scanner tecladoDelUsuario) {
         if (userN == 1) {
             InicioNumeroMagico numeroMagico = new InicioNumeroMagico();
-            numeroMagico.jugar(logger);
+            numeroMagico.jugar(logger,tecladoDelUsuario);
         }
         if (userN == 2) {
             InicioTateti tateti = new InicioTateti();
-            tateti.jugar(logger);
+            tateti.jugar(logger,tecladoDelUsuario);
         }
         if (userN == 3) {
             InicioPiedraPapelTijera piedraPapelTijera = new InicioPiedraPapelTijera();
-            piedraPapelTijera.jugar(logger);
+            piedraPapelTijera.jugar(logger,tecladoDelUsuario);
         }
         if (userN == 4) {
             InicioAhorcado ahorcado = new InicioAhorcado();
-            ahorcado.jugar(logger);
+            ahorcado.jugar(logger,tecladoDelUsuario);
         }
     }
 

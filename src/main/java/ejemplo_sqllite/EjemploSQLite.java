@@ -1,28 +1,30 @@
-package sqlite;
+package ejemplo_sqllite;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.sql.Statement;
 
-public class Sample {
+public class EjemploSQLite {
 
-    public String conexionEjemplo() {
-        Connection connection = null;
+    Connection connection;
+    Statement statement;
+    ResultSet rs;
+    
+    public String conexionEjemplo(String url) {    
         try {
-            connection = DriverManager.getConnection("jdbc:sqlite:sample.db");
-            Statement statement = connection.createStatement();
+            connection = DriverManager.getConnection(url);
+            statement = connection.createStatement();
             statement.executeUpdate("drop table if exists person");
             statement.executeUpdate("create table person (id integer, name string)");
             statement.executeUpdate("insert into person values(1, 'leo')");
             statement.executeUpdate("insert into person values(2, 'yui')");
-            ResultSet rs = statement.executeQuery("select * from person");
+            rs = statement.executeQuery("select * from person");
             rs.next();
             return rs.getString("name");
-        } catch (SQLException e) {
+        } catch (Exception e) {
             System.err.println(e.getMessage());
+            return "fail";
         }
-        return "fail";
     }
 }

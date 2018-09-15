@@ -23,23 +23,27 @@ public class Inicio {
             logger.debug("4 - Ahorcado");
             logger.debug("0 - Salir");
             userN = numUsuario.nextInt();
-            if (userN == 1) {
-                InicioNumeroMagico numeroMagico = new InicioNumeroMagico();
-                numeroMagico.jugar(logger);
-            }
-            if (userN == 2) {
-                InicioTateti tateti = new InicioTateti();
-                tateti.jugar(logger);
-            }
-            if (userN == 3) {
-                InicioPiedraPapelTijera piedraPapelTijera = new InicioPiedraPapelTijera();
-                piedraPapelTijera.jugar(logger);
-            }
-            if (userN == 4) {
-                InicioAhorcado ahorcado = new InicioAhorcado();
-                ahorcado.jugar(logger);
-            }
+            chooseGame(userN, logger);
         } while (userN != 0);
+    }
+
+    private static void chooseGame(int userN, Logger logger) {
+        if (userN == 1) {
+            InicioNumeroMagico numeroMagico = new InicioNumeroMagico();
+            numeroMagico.jugar(logger);
+        }
+        if (userN == 2) {
+            InicioTateti tateti = new InicioTateti();
+            tateti.jugar(logger);
+        }
+        if (userN == 3) {
+            InicioPiedraPapelTijera piedraPapelTijera = new InicioPiedraPapelTijera();
+            piedraPapelTijera.jugar(logger);
+        }
+        if (userN == 4) {
+            InicioAhorcado ahorcado = new InicioAhorcado();
+            ahorcado.jugar(logger);
+        }
     }
 
 }

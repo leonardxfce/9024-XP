@@ -9,8 +9,10 @@ import static org.testfx.matcher.control.LabeledMatchers.hasText;
 public class ControladorTest extends ApplicationTest {
 
     @Override
-    public void start(Stage stage) {
-        Controlador c = new Controlador(stage);
+    public void start(Stage primaryStage) {
+        Controlador controlador = new Controlador();
+        primaryStage.setScene(controlador.getEnvaseScene());
+        primaryStage.show();
     }
 
     @Test

@@ -1,23 +1,24 @@
 package envase;
 
 import javafx.event.*;
-import javafx.scene.Scene;
+import javafx.stage.Stage;
 import org.apache.log4j.Logger;
 
 public class Controlador implements EventHandler<ActionEvent> {
 
     Vista formulario;
     Logger logger;
+    Stage stage;
 
-    Controlador() {
+    Controlador(Stage primaryStage) {
         logger = Logger.getLogger(Controlador.class);
+        stage = primaryStage;
         formulario = new Vista();
         formulario.config();
         formulario.aceptar.setOnAction(this);
-    }
-
-    Scene getEnvaseScene() {
-        return formulario.scene;
+        stage.setTitle("Formulario Envase");
+        stage.setScene(formulario.scene);
+        stage.show();
     }
 
     @Override

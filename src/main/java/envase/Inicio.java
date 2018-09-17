@@ -11,10 +11,6 @@ public class Inicio extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Controlador controlador = new Controlador();
-        primaryStage.setTitle("Formulario Envase");
-        primaryStage.setScene(controlador.getEnvaseScene());
-        primaryStage.show();
-
+        new Controlador(primaryStage);
     }
 }

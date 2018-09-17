@@ -1,18 +1,11 @@
 package envase;
 
-import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
+import javafx.geometry.*;
+import javafx.scene.*;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
 
-public class Vista extends Application {
+public class Vista {
 
     Button aceptar;
     Button cancelar;
@@ -58,8 +51,7 @@ public class Vista extends Application {
         margenes = new Insets(20, 20, 20, 20);
     }
 
-    @Override
-    public void start(Stage primaryStage) {
+    public void config() {
         contenedor.setPadding(margenes);
         labelTexts.setAlignment(Pos.CENTER);
         botones.setAlignment(Pos.CENTER);
@@ -71,9 +63,6 @@ public class Vista extends Application {
         labelTexts.getChildren().addAll(labels, texts);
         todo.getChildren().addAll(labelTexts, botones);
         contenedor.getChildren().add(todo);
-        primaryStage.setTitle("Formulario Envase");
-        primaryStage.setScene(scene);
-        primaryStage.show();
     }
 
 }

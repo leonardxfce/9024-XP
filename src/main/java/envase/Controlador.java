@@ -2,11 +2,13 @@ package envase;
 
 import javafx.event.*;
 import javafx.stage.Stage;
+import login.Login;
 import org.apache.log4j.Logger;
 
 public class Controlador implements EventHandler<ActionEvent> {
 
     Vista formulario;
+    Login lisa;
     Logger logger;
     Stage stage;
 
@@ -14,16 +16,19 @@ public class Controlador implements EventHandler<ActionEvent> {
         logger = Logger.getLogger(Controlador.class);
         stage = primaryStage;
         formulario = new Vista();
+        lisa = new Login();
         formulario.config();
-        formulario.aceptar.setOnAction(this);
+        lisa.config();
+        lisa.aceptar.setOnAction(this);
         stage.setTitle("Formulario Envase");
-        stage.setScene(formulario.scene);
+        stage.setScene(lisa.scene);
         stage.show();
     }
 
     @Override
     public void handle(ActionEvent event) {
-        logger.debug("ME HICIERON CLICK");
+        stage.setScene(formulario.scene);
+
     }
 
 }

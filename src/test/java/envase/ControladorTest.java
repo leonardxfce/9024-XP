@@ -16,7 +16,7 @@ public class ControladorTest extends ApplicationTest {
     @Test
     public void test_se_hace_clic() {
         clickOn(".button");
-        verifyThat(".button", hasText("Aceptar"));
+        verifyThat(".button", hasText("Guardar"));
     }
 
 }

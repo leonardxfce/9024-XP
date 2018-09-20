@@ -4,6 +4,7 @@ import javafx.event.*;
 import javafx.stage.Stage;
 import login.Login;
 import org.apache.log4j.Logger;
+import tapas.Tapas;
 
 public class Controlador implements EventHandler<ActionEvent> {
 
@@ -11,17 +12,20 @@ public class Controlador implements EventHandler<ActionEvent> {
     Login lisa;
     Logger logger;
     Stage stage;
+    Tapas tapa;
 
     Controlador(Stage primaryStage) {
         logger = Logger.getLogger(Controlador.class);
         stage = primaryStage;
         formulario = new Vista();
         lisa = new Login();
+        tapa=new Tapas();
         formulario.config();
         lisa.config();
+        tapa.config();
         lisa.aceptar.setOnAction(this);
         stage.setTitle("Formulario Envase");
-        stage.setScene(lisa.scene);
+        stage.setScene(tapa.scene);
         stage.show();
     }
 

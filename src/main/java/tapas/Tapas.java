@@ -32,6 +32,14 @@ public class Tapas {
     HBox boxBotones;
     VBox todo;
 
+    public Button getBtnGuardar() {
+        return btnGuardar;
+    }
+
+    public Button getBtnCancelar() {
+        return btnCancelar;
+    }
+    
     public Tapas() {
         contenedor = new StackPane();
         scene = new Scene(contenedor);

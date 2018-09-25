@@ -4,6 +4,7 @@ import javafx.event.*;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import login.Login;
+import login.ModeloLogin;
 import org.apache.log4j.Logger;
 import vistas.VistaTapa;
 import vistas.VistaEnvase;
@@ -50,6 +51,10 @@ public class Controlador implements EventHandler<ActionEvent> {
         String textoDelBoton = botonSeleccionado.getText();
         switch (textoDelBoton) {
             case "Ingresar":
+             //   String usuario = vistaLogin.usuario_campo.getText();
+               // String contrasena = vistaLogin.contrasena_campo.getText();
+               // ModeloLogin mL = new ModeloLogin(usuario,contrasena);
+                //mL.insertar();
                 stage.setScene(menuIntermedioParaElegirFormulario.getScene());
                 break;
             case "Cerrar Sesion":

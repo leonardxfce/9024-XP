@@ -13,8 +13,8 @@ public class Login {
     StackPane contenedor;
     Label usuario;
     Label contrasena;
-    TextField usuario_campo;
-    TextField contrasena_campo;
+    public TextField usuario_campo;
+    public TextField contrasena_campo;
     public Button btnIngresar;
     VBox vbox;
 

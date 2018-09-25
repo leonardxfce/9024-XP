@@ -1,9 +1,9 @@
-package envase;
+package controladorVistas;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
 
-public class Inicio extends Application {
+public class vistaInicio extends Application {
 
     public static void main(String[] args) {
         launch(args);

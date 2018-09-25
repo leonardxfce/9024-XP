@@ -9,15 +9,19 @@ import javafx.scene.layout.VBox;
 
 public class Login {
 
-    public Scene scene;
+    private Scene scene;
     StackPane contenedor;
     Label usuario;
     Label contrasena;
     TextField usuario_campo;
     TextField contrasena_campo;
-    public Button aceptar;
+    public Button btnIngresar;
     VBox vbox;
 
+    public Scene getScene() {
+        return scene;
+    }
+    
     public Login() {
         contenedor = new StackPane();
         scene = new Scene(contenedor);
@@ -25,13 +29,13 @@ public class Login {
         contrasena = new Label("Contraseña");
         usuario_campo = new TextField();
         contrasena_campo = new TextField();
-        aceptar = new Button("Aceptar");
+        btnIngresar = new Button("Ingresar");
         vbox = new VBox();
     }
 
     public void config() {
-        vbox.getChildren().addAll(usuario,contrasena,usuario_campo,contrasena_campo,aceptar);
+        vbox.getChildren().addAll(usuario, contrasena, usuario_campo, contrasena_campo, btnIngresar);
         contenedor.getChildren().add(vbox);
     }
 
-    }
+}

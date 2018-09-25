@@ -1,11 +1,11 @@
-package envase;
+package vistas;
 
 import javafx.geometry.*;
 import javafx.scene.*;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 
-public class Vista {
+public class VistaEnvase {
 
     Button aceptar;
     Button cancelar;
@@ -28,7 +28,19 @@ public class Vista {
     HBox labelTexts;
     Insets margenes;
 
-    public Vista() {
+    public Scene getScene() {
+        return scene;
+    }
+    
+    public Button getAceptar() {
+        return aceptar;
+    }
+
+    public Button getCancelar() {
+        return cancelar;
+    }
+
+    public VistaEnvase() {
         contenedor = new StackPane();
         scene = new Scene(contenedor);
         labelNom = new Label("Nombre");
@@ -58,8 +70,8 @@ public class Vista {
         labels.setAlignment(Pos.TOP_LEFT);
         texts.setAlignment(Pos.TOP_LEFT);
         labels.getChildren().addAll(labelNom, labelCap, labelCant, labelEstado, labelProv);
-        texts.getChildren().addAll(textField, textCap, textCant, textEstado, textProv, cancelar);
-        botones.getChildren().addAll(aceptar, cancelar);
+        texts.getChildren().addAll(textField, textCap, textCant, textEstado, textProv, getCancelar());
+        botones.getChildren().addAll(getAceptar(), getCancelar());
         labelTexts.getChildren().addAll(labels, texts);
         todo.getChildren().addAll(labelTexts, botones);
         contenedor.getChildren().add(todo);

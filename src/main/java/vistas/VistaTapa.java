@@ -1,9 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package tapas;
+
+package vistas;
 
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -17,11 +13,11 @@ import javafx.scene.layout.VBox;
  *
  * @author ikariRules
  */
-public class Tapas {
+public class VistaTapa {
 
-    public Scene scene;
+    private Scene scene;
     StackPane contenedor;
-    Button btnGuardar;
+    Button btnAceptar;
     Button btnCancelar;
     Label cantidad;
     Label tipoDeTapa;
@@ -32,18 +28,22 @@ public class Tapas {
     HBox boxBotones;
     VBox todo;
 
-    public Button getBtnGuardar() {
-        return btnGuardar;
+    public Scene getScene() {
+        return scene;
+    }
+    
+    public Button getBtnAceptar() {
+        return btnAceptar;
     }
 
     public Button getBtnCancelar() {
         return btnCancelar;
     }
     
-    public Tapas() {
+    public VistaTapa() {
         contenedor = new StackPane();
         scene = new Scene(contenedor);
-        btnGuardar = new Button("Guardar");
+        btnAceptar = new Button("Aceptar");
         btnCancelar = new Button("Cancelar");
         cantidad = new Label("Cantidad");
         tipoDeTapa = new Label("Tipo");
@@ -58,8 +58,9 @@ public class Tapas {
     public void config() {
         boxTipo.getChildren().addAll(tipoDeTapa, seleccionTipoDeTapa);
         boxCantidad.getChildren().addAll(cantidad, seleccionCantidad);
-        boxBotones.getChildren().addAll(btnGuardar, btnCancelar);
+        boxBotones.getChildren().addAll(btnAceptar, btnCancelar);
         todo.getChildren().addAll(boxTipo, boxCantidad, boxBotones);
         contenedor.getChildren().add(todo);
     }
+
 }

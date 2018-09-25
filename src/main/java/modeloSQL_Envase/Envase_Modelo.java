@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package envase;
+package modeloSQL_Envase;
 
 import ejemplo_sqlite.EjemploSQLite;
 import java.sql.Connection;

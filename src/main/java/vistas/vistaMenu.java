@@ -10,18 +10,15 @@ import javafx.scene.layout.VBox;
  *
  * @author SantiagoLisa
  */
-public class vistaMenu {
+public class vistaMenu extends VistaPadre {
 
-    private Scene scene;
-    StackPane contenedor;
     Button btnEnvase;
     Button btnTapas;
     Button btnCerrarSesion;
     Label titulo;
-    VBox contenido;
 
     public Scene getScene() {
-        return scene;
+        return this.scene;
     }
     
     public Button getBtnEnvase() {
@@ -37,13 +34,11 @@ public class vistaMenu {
     }
     
     public vistaMenu() {
-        contenedor = new StackPane();
-        scene = new Scene(contenedor);
+        super();
         btnEnvase = new Button("Formulario Envase");
         btnTapas = new Button("Formulario Tapa");
         btnCerrarSesion = new Button("Cerrar Sesion");
         titulo = new Label("-----");
-        contenido = new VBox();
     }
     
     public void config(){

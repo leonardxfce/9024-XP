@@ -13,10 +13,7 @@ import javafx.scene.layout.VBox;
  *
  * @author ikariRules
  */
-public class VistaTapa {
-
-    private Scene scene;
-    StackPane contenedor;
+public class VistaTapa extends VistaPadre {
     Button btnAceptar;
     Button btnCancelar;
     Label cantidad;
@@ -26,10 +23,9 @@ public class VistaTapa {
     HBox boxTipo;
     HBox boxCantidad;
     HBox boxBotones;
-    VBox todo;
 
     public Scene getScene() {
-        return scene;
+        return this.scene;
     }
     
     public Button getBtnAceptar() {
@@ -41,8 +37,7 @@ public class VistaTapa {
     }
     
     public VistaTapa() {
-        contenedor = new StackPane();
-        scene = new Scene(contenedor);
+        super();
         btnAceptar = new Button("Aceptar");
         btnCancelar = new Button("Cancelar");
         cantidad = new Label("Cantidad");
@@ -52,15 +47,14 @@ public class VistaTapa {
         boxTipo = new HBox();
         boxCantidad = new HBox();
         boxBotones = new HBox();
-        todo = new VBox();
     }
 
     public void config() {
         boxTipo.getChildren().addAll(tipoDeTapa, seleccionTipoDeTapa);
         boxCantidad.getChildren().addAll(cantidad, seleccionCantidad);
         boxBotones.getChildren().addAll(btnAceptar, btnCancelar);
-        todo.getChildren().addAll(boxTipo, boxCantidad, boxBotones);
-        contenedor.getChildren().add(todo);
+        contenido.getChildren().addAll(boxTipo, boxCantidad, boxBotones);
+        contenedor.getChildren().add(contenido);
     }
 
 }

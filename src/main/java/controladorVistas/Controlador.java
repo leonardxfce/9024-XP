@@ -3,7 +3,7 @@ package controladorVistas;
 import javafx.event.*;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import login.Login;
+import vistas.Login;
 import login.ModeloLogin;
 import org.apache.log4j.Logger;
 import vistas.VistaTapa;

@@ -5,34 +5,30 @@
  */
 package ta_te_ti;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.*;
+
+import static org.junit.Assert.assertTrue;
 
 /**
- *
  * @author thebo
  */
 public class IATest {
-    
+
     public IATest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -46,9 +42,9 @@ public class IATest {
         IA instance = new IA();
         int result = instance.alatoriedad();
         System.out.println(result);
-        assertTrue(0<result  &&  result<10);
+        assertTrue(0 < result && result < 10);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
-    
+
 }

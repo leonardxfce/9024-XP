@@ -5,11 +5,11 @@
  */
 package numero_magico;
 
-import java.util.Scanner;
 import org.apache.log4j.Logger;
 
+import java.util.Scanner;
+
 /**
- *
  * @author lautaro
  */
 public class InicioNumeroMagico {
@@ -53,12 +53,12 @@ public class InicioNumeroMagico {
             Jugador jugV = new Jugador(); //llamamos la clase jugador
             int vidas;
             int conter = 1;
-            
+
             System.out.println("Bienvenido a Numero Mágico Inverso");
             System.out.println("OBJETIVOS DEL JUEGO:");
             System.out.println("*Piense en un número del 1 al 100 y la máquina intentará adivinarlo");
             System.out.println("*Ingrese menor '<' mayor '>' o igual '=' segun corresponda");
-            
+
             int min = 0;
             int max = 100;
             int numeroPC;
@@ -68,9 +68,9 @@ public class InicioNumeroMagico {
                 jugV.quitarVida();
                 System.out.println("*La Maquina tiene un total de " + vidas + " vidas");
                 numeroPC = pc.darNumero(min, max);
-                System.out.println("Tu número es "+numeroPC+"?");
+                System.out.println("Tu número es " + numeroPC + "?");
                 Scanner nomb = new Scanner(System.in);
-                 otroNombre = nomb.nextLine();
+                otroNombre = nomb.nextLine();
 
                 if (otroNombre.equals("<")) {
                     max = numeroPC;
@@ -79,18 +79,17 @@ public class InicioNumeroMagico {
                     min = numeroPC;
                 }
                 if (otroNombre.equals("=")) {
-                    
+
                     System.out.println("Fin del juego, Tu numero es " + numeroPC);
                 }
-                
-            } while (!otroNombre.equals("=") && vidas != 1);
-            if (vidas==1) {
-                System.out.println("Fin del juego, La computadora se quedo sin vida");
-                }
-            }
-            
 
-  
+            } while (!otroNombre.equals("=") && vidas != 1);
+            if (vidas == 1) {
+                System.out.println("Fin del juego, La computadora se quedo sin vida");
+            }
+        }
+
+
     }
 
     public int testeo(int option) {

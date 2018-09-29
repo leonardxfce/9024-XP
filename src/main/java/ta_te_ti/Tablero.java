@@ -6,7 +6,6 @@
 package ta_te_ti;
 
 /**
- *
  * @author ikariRules
  */
 public class Tablero {
@@ -113,7 +112,8 @@ public class Tablero {
         System.err.println(retorno);
         return retorno;
     }
-        public String escribirElJugadoVsPC(int dato) {
+
+    public String escribirElJugadoVsPC(int dato) {
         String retorno = "";
         if (dato == 1) {
             retorno = "Juega el primer jugador";
@@ -148,9 +148,9 @@ public class Tablero {
         System.err.println(retorno);
         return retorno;
     }
-    
+
     //metodo que muestra el tablero en la consola
-    public void tablero(){
+    public void tablero() {
         System.err.println("----------------------------------");
         System.err.println("|          |          |          |");
         System.err.println("|    " + campoDeTablero[0] + "    |    " + campoDeTablero[1] + "    |    " + campoDeTablero[2] + "    |");
@@ -164,7 +164,7 @@ public class Tablero {
         System.err.println("|    " + campoDeTablero[6] + "    |    " + campoDeTablero[7] + "    |    " + campoDeTablero[8] + "    |");
         System.err.println("|          |          |          |");
         System.err.println("----------------------------------");
-        
+
     }
 
 }

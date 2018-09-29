@@ -6,8 +6,12 @@
 package numero_magico;
 
 
-class Jugador{
- int vidas;
+class Jugador {
+    int vidas;
+
+    public Jugador() {
+        vidas = 10;
+    }
 
     public int getVidas() {
         return vidas;
@@ -18,12 +22,8 @@ class Jugador{
     }
 
     void quitarVida() {
-        this.vidas--;
+        vidas--;
     }
 
-    public Jugador() {
-        this.vidas=10;
-    }
-    
-  
+
 }

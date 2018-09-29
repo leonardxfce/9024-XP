@@ -10,15 +10,14 @@ public class VistaPadre {
     StackPane contenedor;
     VBox contenido;
     Insets margenes;
-    
-    public VistaPadre(){
+
+    public VistaPadre() {
         contenedor = new StackPane();
         scene = new Scene(contenedor);
         contenido = new VBox();
         margenes = new Insets(20, 20, 20, 20);
         contenedor.setPadding(margenes);
     }
-    
-    
-    
+
+
 }

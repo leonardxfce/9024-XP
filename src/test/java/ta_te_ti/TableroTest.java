@@ -9,11 +9,10 @@ import junit.framework.TestCase;
 import org.junit.Test;
 
 /**
- *
  * @author SantiagoGuirado
  */
 public class TableroTest extends TestCase {
-    
+
     public TableroTest(String testName) {
         super(testName);
     }
@@ -34,8 +33,9 @@ public class TableroTest extends TestCase {
         Tablero instance = new Tablero();
         int expResult = 1;
         int result = instance.jugadorActual();
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
     }
+
     @Test
     public void testJugadorActual02() {
         System.out.println("jugadorActual02");
@@ -45,7 +45,7 @@ public class TableroTest extends TestCase {
         //Se pide un valor al metodo jugador actual
         int expResult = 2;
         int result = instance.jugadorActual();
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -60,7 +60,7 @@ public class TableroTest extends TestCase {
         Tablero instance = new Tablero();
         boolean expResult = false;
         boolean result = instance.verificadorDePosicionOcupada(posicionIngresadoPorJugador);
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -76,7 +76,7 @@ public class TableroTest extends TestCase {
         //Se verifica si la posicion esta ocupada
         boolean expResult = true;
         boolean result = instance.verificadorDePosicionOcupada(posicionIngresadoPorJugador);
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -93,7 +93,7 @@ public class TableroTest extends TestCase {
         //Se verifica si la posicion esta ocupada
         boolean expResult = true;
         boolean result = instance.verificadorDePosicionOcupada(posicionIngresadoPorJugador);
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -108,7 +108,7 @@ public class TableroTest extends TestCase {
         Tablero instance = new Tablero();
         String expResult = "J1";
         String result = instance.marcaDeCadaJugadorEnTablero(posicionIngresadoPorJugador);
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -123,7 +123,7 @@ public class TableroTest extends TestCase {
         //Ahora se verifica el valor
         String expResult = "J2";
         String result = instance.marcaDeCadaJugadorEnTablero(posicionIngresadoPorJugador);
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -137,7 +137,7 @@ public class TableroTest extends TestCase {
         Tablero instance = new Tablero();
         int expResult = 2;
         int result = instance.cambioDeJugador();
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -151,7 +151,7 @@ public class TableroTest extends TestCase {
         //para que al volver a cambiarlo el jugador vuelva a ser 1
         int expResult = 1;
         int result = instance.cambioDeJugador();
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -165,7 +165,7 @@ public class TableroTest extends TestCase {
         Tablero instance = new Tablero();
         String expResult = null;
         String result = instance.lineaCompletada();
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -181,7 +181,7 @@ public class TableroTest extends TestCase {
         //y se verifica el metodo
         String expResult = "J1";
         String result = instance.lineaCompletada();
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -198,10 +198,11 @@ public class TableroTest extends TestCase {
         //y se verifica el metodo
         String expResult = "J2";
         String result = instance.lineaCompletada();
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
+
     @Test
     public void testLineaCompletada04() {
         System.out.println("lineaCompletada03");
@@ -217,7 +218,7 @@ public class TableroTest extends TestCase {
         //y se verifica el metodo
         String expResult = "J2";
         String result = instance.lineaCompletada();
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -231,7 +232,7 @@ public class TableroTest extends TestCase {
         Tablero instance = new Tablero();
         String expResult = "Juega el primer jugador";
         String result = instance.escribirElJugadorActual(1);
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -242,7 +243,7 @@ public class TableroTest extends TestCase {
         Tablero instance = new Tablero();
         String expResult = "Juega el segundo jugador";
         String result = instance.escribirElJugadorActual(2);
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -256,11 +257,11 @@ public class TableroTest extends TestCase {
         Tablero instance = new Tablero();
         String expResult = "La posicion elegida esta ocupada";
         String result = instance.escribirPosicionOcupadaDesocupada(true);
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
-    
+
     /**
      * Test of escribirJugadorGanador method, of class Tablero.
      */
@@ -270,17 +271,18 @@ public class TableroTest extends TestCase {
         Tablero instance = new Tablero();
         String expResult = "Gano el jugador 1";
         String result = instance.escribirJugadorGanador("J1");
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
+
     @Test
     public void testEscribirJugadorGanador02() {
         System.out.println("escribirJugadorGanador01");
         Tablero instance = new Tablero();
         String expResult = "Gano el jugador 2";
         String result = instance.escribirJugadorGanador("J2");
-        assertEquals(expResult, result);
+        TestCase.assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }

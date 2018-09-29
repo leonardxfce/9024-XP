@@ -6,14 +6,13 @@
 package modeloSQL_Envase;
 
 import ejemplo_sqlite.EjemploSQLite;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
 import org.apache.log4j.Logger;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
+
 /**
- *
  * @author caro_
  */
 public class Envase_Modelo {
@@ -26,18 +25,17 @@ public class Envase_Modelo {
     String material;
     int capacidad;
     String url;
-   
+
 
     public Envase_Modelo(String nombre, String tipo, String material, int capacidad) {
         this.nombre = nombre;
         this.tipo = tipo;
         this.material = material;
         this.capacidad = capacidad;
-        this.url = "jdbc:sqlite:sample.db";
+        url = "jdbc:sqlite:sample.db";
     }
-    
-    
-    
+
+
     public void insert() {
         try {
             connection = DriverManager.getConnection(url);

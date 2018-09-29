@@ -5,7 +5,7 @@ import junit.framework.TestCase;
 public class PiedraPapelTijeraTest extends TestCase {
 
     public void test_de_ejemplo() {
-        assertTrue(true);
+        TestCase.assertTrue(true);
     }
 
 }

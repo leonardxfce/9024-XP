@@ -4,29 +4,25 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
-import vistas.VistaPadre;
 
-public class Login extends VistaPadre{
+public class Login extends VistaPadre {
 
-    Label usuario;
-    Label contrasena;
     public TextField usuario_campo;
     public TextField contrasena_campo;
     public Button btnIngresar;
+    Label usuario;
+    Label contrasena;
 
-    public Scene getScene() {
-        return scene;
-    }
-    
     public Login() {
-        super();
         usuario = new Label("Usuario");
         contrasena = new Label("Contraseña");
         usuario_campo = new TextField();
         contrasena_campo = new TextField();
         btnIngresar = new Button("Ingresar");
+    }
+
+    public Scene getScene() {
+        return scene;
     }
 
     public void config() {

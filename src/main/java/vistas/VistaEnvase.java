@@ -1,12 +1,20 @@
 package vistas;
 
-import javafx.geometry.*;
-import javafx.scene.*;
-import javafx.scene.control.*;
-import javafx.scene.layout.*;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 public class VistaEnvase extends VistaPadre {
 
+    public TextField textField;
+    public TextField textCap;
+    public TextField textCant;
+    public TextField textEstado;
     Button aceptar;
     Button cancelar;
     Label labelNom;
@@ -14,30 +22,13 @@ public class VistaEnvase extends VistaPadre {
     Label labelCant;
     Label labelEstado;
     Label labelProv;
-    public TextField textField;
-    public TextField textCap;
-    public TextField textCant;
-    public TextField textEstado;
     TextField textProv;
     VBox labels;
     VBox texts;
     HBox botones;
     HBox labelTexts;
 
-    public Scene getScene() {
-        return this.scene;
-    }
-
-    public Button getAceptar() {
-        return aceptar;
-    }
-
-    public Button getCancelar() {
-        return cancelar;
-    }
-
     public VistaEnvase() {
-        super();
         labelNom = new Label("Nombre");
         labelCap = new Label("Capacidad");
         labelCant = new Label("Cantidad");
@@ -55,6 +46,18 @@ public class VistaEnvase extends VistaPadre {
         botones = new HBox();
         labelTexts = new HBox();
         margenes = new Insets(20, 20, 20, 20);
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public Button getAceptar() {
+        return aceptar;
+    }
+
+    public Button getCancelar() {
+        return cancelar;
     }
 
     public void config() {

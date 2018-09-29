@@ -5,16 +5,11 @@
  */
 package login;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
  * @author lauta
  */
 public class ModeloLogin {
@@ -30,7 +25,7 @@ public class ModeloLogin {
     public ModeloLogin(String usuario, String password) {
         this.usuario = usuario;
         this.password = password;
-        this.url = "jdbc:postgresql://pellefant.db.elephantsql.com:5432/prafqulb";
+        url = "jdbc:postgresql://pellefant.db.elephantsql.com:5432/prafqulb";
 
     }
 

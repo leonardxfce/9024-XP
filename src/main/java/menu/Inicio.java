@@ -1,11 +1,12 @@
 package menu;
 
 import ahorcado.InicioAhorcado;
-import java.util.Scanner;
 import numero_magico.InicioNumeroMagico;
 import org.apache.log4j.Logger;
 import piedra_papel_tijera.InicioPiedraPapelTijera;
 import ta_te_ti.InicioTateti;
+
+import java.util.Scanner;
 
 public class Inicio {
 
@@ -23,26 +24,26 @@ public class Inicio {
             logger.debug("4 - Ahorcado");
             logger.debug("0 - Salir");
             userN = scanner.nextInt();
-            chooseGame(userN, logger,scanner);
+            chooseGame(userN, logger, scanner);
         } while (userN != 0);
     }
 
-    private static void chooseGame(int userN, Logger logger,Scanner tecladoDelUsuario) {
+    private static void chooseGame(int userN, Logger logger, Scanner tecladoDelUsuario) {
         if (userN == 1) {
             InicioNumeroMagico numeroMagico = new InicioNumeroMagico();
-            numeroMagico.jugar(logger,tecladoDelUsuario);
+            numeroMagico.jugar(logger, tecladoDelUsuario);
         }
         if (userN == 2) {
             InicioTateti tateti = new InicioTateti();
-            tateti.jugar(logger,tecladoDelUsuario);
+            tateti.jugar(logger, tecladoDelUsuario);
         }
         if (userN == 3) {
             InicioPiedraPapelTijera piedraPapelTijera = new InicioPiedraPapelTijera();
-            piedraPapelTijera.jugar(logger,tecladoDelUsuario);
+            piedraPapelTijera.jugar(logger, tecladoDelUsuario);
         }
         if (userN == 4) {
             InicioAhorcado ahorcado = new InicioAhorcado();
-            ahorcado.jugar(logger,tecladoDelUsuario);
+            ahorcado.jugar(logger, tecladoDelUsuario);
         }
     }
 

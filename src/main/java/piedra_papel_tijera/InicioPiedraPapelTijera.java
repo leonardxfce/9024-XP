@@ -5,11 +5,11 @@
  */
 package piedra_papel_tijera;
 
-import java.util.Scanner;
 import org.apache.log4j.Logger;
 
+import java.util.Scanner;
+
 /**
- *
  * @author caro_
  */
 public class InicioPiedraPapelTijera {
@@ -28,9 +28,9 @@ public class InicioPiedraPapelTijera {
         logger.debug("----------------------------------------");
         Usuario c = new Usuario();
         JugadaComputadora nuevaJugada = new JugadaComputadora();
-        
+
         ComprobarJugada comp = new ComprobarJugada();
-        
+
         int rastrear;
         String result;
         String resultFinal = "";
@@ -43,15 +43,15 @@ public class InicioPiedraPapelTijera {
             for (int j = 0; j < 3; j++) {
                 if (dato.equals(posibilidades[j])) {
                     bandera = true;
-                }            
+                }
             }
-            
+
             if (bandera == true) {
                 String resultado1 = comp.computadoraResult(numA);
                 logger.debug(resultado1);
                 result = comp.comprobar(numA, dato);
                 logger.debug("Usted " + result);
-                
+
                 if (result == "gano") {
                     puntos++;
                 }
@@ -63,7 +63,7 @@ public class InicioPiedraPapelTijera {
                 i--;
             }
             logger.debug("*************************************");
-        }        
+        }
         logger.debug("Tiene " + puntos + " puntos");
         if (puntos >= 2) {
             resultFinal = "gano";
@@ -71,9 +71,9 @@ public class InicioPiedraPapelTijera {
             resultFinal = "perdio";
         }
         logger.debug("RESULTADO FINAL: " + resultFinal);
-        
+
         BaseDeDatos nuevo = new BaseDeDatos();
         nuevo.conexionEjemplo(puntos);
     }
-    
+
 }

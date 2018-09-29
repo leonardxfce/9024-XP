@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import vistas.Login;
 import login.ModeloLogin;
+import modeloSQL_Envase.Envase_Modelo;
 import org.apache.log4j.Logger;
 import vistas.VistaTapa;
 import vistas.VistaEnvase;
@@ -71,6 +72,11 @@ public class Controlador implements EventHandler<ActionEvent> {
                 break;
             case "Cancelar":
                 stage.setScene(menuIntermedioParaElegirFormulario.getScene());
+                break;
+            case "Guardar Envase":
+                String nombre = vistaEnvase.textField.getText();
+                Envase_Modelo modelo = new Envase_Modelo("A","B","C",1);
+                modelo.insert();
                 break;
 
         }

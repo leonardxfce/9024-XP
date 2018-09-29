@@ -20,22 +20,30 @@ public class Envase_Modelo {
 
     Connection connection;
     Statement statement;
-    ResultSet rs;
-
+    int id;
     String nombre;
     String tipo;
     String material;
     int capacidad;
-
+    String url;
    
+
+    public Envase_Modelo(String nombre, String tipo, String material, int capacidad) {
+        this.nombre = nombre;
+        this.tipo = tipo;
+        this.material = material;
+        this.capacidad = capacidad;
+        this.url = "jdbc:sqlite:sample.db";
+    }
     
-    public void insert(String url) {
+    
+    
+    public void insert() {
         try {
             connection = DriverManager.getConnection(url);
             statement = connection.createStatement();
-            statement.executeUpdate("drop table if exists envase");
-            statement.executeUpdate("create table envase (nombre string, tipo string, material string, capacidad int)");
-            statement.executeUpdate("insert into envase values(" + nombre + ", " + tipo + ", " + material + ", " + capacidad + ")");
+            System.out.println("insert into envase values(1,'" + nombre + "', '" + tipo + "', '" + material + "', '" + capacidad + "')");
+            statement.executeUpdate("insert into envase values(1,'" + nombre + "', '" + tipo + "', '" + material + "',' " + capacidad + "')");
         } catch (Exception e) {
             Logger logger = Logger.getLogger(EjemploSQLite.class);
             logger.error(e.getMessage());

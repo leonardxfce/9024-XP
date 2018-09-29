@@ -14,10 +14,10 @@ public class VistaEnvase extends VistaPadre {
     Label labelCant;
     Label labelEstado;
     Label labelProv;
-    TextField textField;
-    TextField textCap;
-    TextField textCant;
-    TextField textEstado;
+    public TextField textField;
+    public TextField textCap;
+    public TextField textCant;
+    public TextField textEstado;
     TextField textProv;
     VBox labels;
     VBox texts;
@@ -48,7 +48,7 @@ public class VistaEnvase extends VistaPadre {
         textCant = new TextField();
         textEstado = new TextField();
         textProv = new TextField();
-        aceptar = new Button("Aceptar");
+        aceptar = new Button("Guardar Envase");
         cancelar = new Button("Cancelar");
         labels = new VBox(10);
         texts = new VBox(3);

@@ -29,48 +29,48 @@ public class VistaEnvase extends VistaPadre {
     HBox labelTexts;
 
     public VistaEnvase() {
-        labelNom = new Label("Nombre");
-        labelCap = new Label("Capacidad");
-        labelCant = new Label("Cantidad");
-        labelEstado = new Label("Estado");
-        labelProv = new Label("Proveedor");
-        textField = new TextField();
-        textCap = new TextField();
-        textCant = new TextField();
-        textEstado = new TextField();
-        textProv = new TextField();
-        aceptar = new Button("Guardar Envase");
-        cancelar = new Button("Cancelar");
-        labels = new VBox(10);
-        texts = new VBox(3);
-        botones = new HBox();
-        labelTexts = new HBox();
-        margenes = new Insets(20, 20, 20, 20);
+        this.labelNom = new Label("Nombre");
+        this.labelCap = new Label("Capacidad");
+        this.labelCant = new Label("Cantidad");
+        this.labelEstado = new Label("Estado");
+        this.labelProv = new Label("Proveedor");
+        this.textField = new TextField();
+        this.textCap = new TextField();
+        this.textCant = new TextField();
+        this.textEstado = new TextField();
+        this.textProv = new TextField();
+        this.aceptar = new Button("Guardar Envase");
+        this.cancelar = new Button("Cancelar");
+        this.labels = new VBox(10);
+        this.texts = new VBox(3);
+        this.botones = new HBox();
+        this.labelTexts = new HBox();
+        this.margenes = new Insets(20, 20, 20, 20);
     }
 
     public Scene getScene() {
-        return scene;
+        return this.scene;
     }
 
     public Button getAceptar() {
-        return aceptar;
+        return this.aceptar;
     }
 
     public Button getCancelar() {
-        return cancelar;
+        return this.cancelar;
     }
 
     public void config() {
-        labelTexts.setAlignment(Pos.CENTER);
-        botones.setAlignment(Pos.CENTER);
-        labels.setAlignment(Pos.TOP_LEFT);
-        texts.setAlignment(Pos.TOP_LEFT);
-        labels.getChildren().addAll(labelNom, labelCap, labelCant, labelEstado, labelProv);
-        texts.getChildren().addAll(textField, textCap, textCant, textEstado, textProv, getCancelar());
-        botones.getChildren().addAll(getAceptar(), getCancelar());
-        labelTexts.getChildren().addAll(labels, texts);
-        contenido.getChildren().addAll(labelTexts, botones);
-        contenedor.getChildren().add(contenido);
+        this.labelTexts.setAlignment(Pos.CENTER);
+        this.botones.setAlignment(Pos.CENTER);
+        this.labels.setAlignment(Pos.TOP_LEFT);
+        this.texts.setAlignment(Pos.TOP_LEFT);
+        this.labels.getChildren().addAll(this.labelNom, this.labelCap, this.labelCant, this.labelEstado, this.labelProv);
+        this.texts.getChildren().addAll(this.textField, this.textCap, this.textCant, this.textEstado, this.textProv, this.getCancelar());
+        this.botones.getChildren().addAll(this.getAceptar(), this.getCancelar());
+        this.labelTexts.getChildren().addAll(this.labels, this.texts);
+        this.contenido.getChildren().addAll(this.labelTexts, this.botones);
+        this.contenedor.getChildren().add(this.contenido);
     }
 
 }

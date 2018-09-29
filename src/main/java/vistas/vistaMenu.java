@@ -15,31 +15,31 @@ public class vistaMenu extends VistaPadre {
     Label titulo;
 
     public vistaMenu() {
-        btnEnvase = new Button("Formulario Envase");
-        btnTapas = new Button("Formulario Tapa");
-        btnCerrarSesion = new Button("Cerrar Sesion");
-        titulo = new Label("-----");
+        this.btnEnvase = new Button("Formulario Envase");
+        this.btnTapas = new Button("Formulario Tapa");
+        this.btnCerrarSesion = new Button("Cerrar Sesion");
+        this.titulo = new Label("-----");
     }
 
     public Scene getScene() {
-        return scene;
+        return this.scene;
     }
 
     public Button getBtnEnvase() {
-        return btnEnvase;
+        return this.btnEnvase;
     }
 
     public Button getBtnTapas() {
-        return btnTapas;
+        return this.btnTapas;
     }
 
     public Button getBtnCerrarSesion() {
-        return btnCerrarSesion;
+        return this.btnCerrarSesion;
     }
 
     public void config() {
-        contenido.getChildren().addAll(titulo, getBtnEnvase(), getBtnTapas(), getBtnCerrarSesion());
-        contenedor.getChildren().add(contenido);
+        this.contenido.getChildren().addAll(this.titulo, this.getBtnEnvase(), this.getBtnTapas(), this.getBtnCerrarSesion());
+        this.contenedor.getChildren().add(this.contenido);
     }
 
 }

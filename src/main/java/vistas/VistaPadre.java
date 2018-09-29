@@ -12,11 +12,11 @@ public class VistaPadre {
     Insets margenes;
 
     public VistaPadre() {
-        contenedor = new StackPane();
-        scene = new Scene(contenedor);
-        contenido = new VBox();
-        margenes = new Insets(20, 20, 20, 20);
-        contenedor.setPadding(margenes);
+        this.contenedor = new StackPane();
+        this.scene = new Scene(this.contenedor);
+        this.contenido = new VBox();
+        this.margenes = new Insets(20, 20, 20, 20);
+        this.contenedor.setPadding(this.margenes);
     }
 
 

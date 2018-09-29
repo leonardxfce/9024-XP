@@ -5,34 +5,30 @@
  */
 package login;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.*;
+
+import static org.junit.Assert.assertEquals;
 
 /**
- *
  * @author lauta
  */
 public class ModeloLoginTest {
-    
+
     public ModeloLoginTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -43,11 +39,11 @@ public class ModeloLoginTest {
     @Test
     public void testSeleccionar() {
         System.out.println("seleccionar");
-        
-        ModeloLogin instance = new ModeloLogin("LISA","1234");
+
+        ModeloLogin instance = new ModeloLogin("LISA", "1234");
         String result = instance.seleccionar();
-        assertEquals("LISA",result);
+        assertEquals("LISA", result);
     }
 
-   
+
 }

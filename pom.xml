@@ -95,6 +95,11 @@
                     <maxmem>256m</maxmem>
                     <aggregate>true</aggregate>
                     <check/>
+                    <formats>
+                        <format>html</format>
+                        <format>xml</format>
+                    </formats>
+                    <check/>
                 </configuration>
             </plugin>
             <plugin>
@@ -109,7 +114,7 @@
                     </execution>
                     <execution>
                         <id>report</id>
-                        <phase>prepare-package</phase>
+                        <phase>test</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>

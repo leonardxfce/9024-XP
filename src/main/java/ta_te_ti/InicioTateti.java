@@ -1,11 +1,12 @@
 package ta_te_ti;
 
-import java.util.Scanner;
 import org.apache.log4j.Logger;
+
+import java.util.Scanner;
 
 public class InicioTateti {
 
-    public void jugar(Logger logger,Scanner tecladoDelUsuario) {
+    public void jugar(Logger logger, Scanner tecladoDelUsuario) {
         Scanner tecla = tecladoDelUsuario;
         Tablero miTablero = new Tablero();
         int contador = 0;

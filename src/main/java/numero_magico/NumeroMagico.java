@@ -5,7 +5,7 @@ public class NumeroMagico {
     int numMagico;
 
     int crearNumeroMagico() {
-        this.numMagico = (int) (Math.random() * 100) + 1;
+        numMagico = (int) (Math.random() * 100) + 1;
         return numMagico;
     }
 

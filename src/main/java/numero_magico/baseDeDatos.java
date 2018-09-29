@@ -5,11 +5,7 @@
  */
 package numero_magico;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 
 public class baseDeDatos {
@@ -20,7 +16,7 @@ public class baseDeDatos {
             Statement statement = connection.createStatement();
             statement.executeUpdate("drop table if exists person");
             statement.executeUpdate("create table person (id integer, vidas int)");
-            statement.executeUpdate("insert into person values(1, "+vidas+")");
+            statement.executeUpdate("insert into person values(1, " + vidas + ")");
             ResultSet rs = statement.executeQuery("select * from person");
             rs.next();
             return rs.getInt("vidas");
@@ -28,6 +24,6 @@ public class baseDeDatos {
             System.err.println(e.getMessage());
         }
         return 0;
-}
+    }
 
 }

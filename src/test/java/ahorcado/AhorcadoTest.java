@@ -12,7 +12,7 @@ public class AhorcadoTest extends TestCase {
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
         boolean result = instance.comprobarLetra('b');
-        assertEquals(result, true);
+        TestCase.assertEquals(result, true);
     }
 
     public void testAhorcado2() {
@@ -21,7 +21,7 @@ public class AhorcadoTest extends TestCase {
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
         boolean result = instance.comprobarLetra('u');
-        assertEquals(result, true);
+        TestCase.assertEquals(result, true);
     }
 
     public void testAhorcado3() {
@@ -30,7 +30,7 @@ public class AhorcadoTest extends TestCase {
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
         boolean result = instance.comprobarLetra('h');
-        assertEquals(result, true);
+        TestCase.assertEquals(result, true);
     }
 
     public void testAhorcado4() {
@@ -39,7 +39,7 @@ public class AhorcadoTest extends TestCase {
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
         boolean result = instance.comprobarLetra('o');
-        assertEquals(result, true);
+        TestCase.assertEquals(result, true);
     }
 
     public void testAhorcado5() {
@@ -48,7 +48,7 @@ public class AhorcadoTest extends TestCase {
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
         boolean result = instance.comprobarLetra('z');
-        assertEquals(result, false);
+        TestCase.assertEquals(result, false);
     }
 
     public void testAhorcado6() {
@@ -61,7 +61,7 @@ public class AhorcadoTest extends TestCase {
         instance.comprobarLetra('h');
         instance.comprobarLetra('o');
         boolean result = instance.adivinoLaPalabra();
-        assertEquals(result, true);
+        TestCase.assertEquals(result, true);
     }
 
     public void testAhorcado7() {
@@ -69,10 +69,11 @@ public class AhorcadoTest extends TestCase {
         instance.palabra = "buho";
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
-        Scanner sc = new Scanner(System.in);Jugador jugador = new Jugador(sc);
+        Scanner sc = new Scanner(System.in);
+        Jugador jugador = new Jugador(sc);
         boolean comprobar = instance.comprobarLetra('z');
         jugador.restarVida(comprobar);
-        assertEquals(jugador.vidas, 9);
+        TestCase.assertEquals(jugador.vidas, 9);
     }
 
     public void testAhorcado8() {
@@ -80,10 +81,11 @@ public class AhorcadoTest extends TestCase {
         instance.palabra = "buho";
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
-        Scanner sc = new Scanner(System.in);Jugador jugador = new Jugador(sc);
+        Scanner sc = new Scanner(System.in);
+        Jugador jugador = new Jugador(sc);
         boolean comprobar = instance.comprobarLetra('u');
         jugador.restarVida(comprobar);
-        assertEquals(jugador.vidas, 10);
+        TestCase.assertEquals(jugador.vidas, 10);
     }
 
     public void testAhorcado9() {
@@ -93,36 +95,39 @@ public class AhorcadoTest extends TestCase {
         instance.datosAhorcado();
         String result = instance.elegirPalabra();
         String resultado = instance.elegirPalabra();
-        assertTrue(result != resultado);
+        TestCase.assertTrue(result != resultado);
     }
 
     public void testAhorcado10() {
         Ahorcado instance = new Ahorcado();
-        Scanner sc = new Scanner(System.in);Jugador jugador = new Jugador(sc);
+        Scanner sc = new Scanner(System.in);
+        Jugador jugador = new Jugador(sc);
         instance.palabra = "buho";
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
         jugador.restarVida(instance.comprobarLetra('q'));
         jugador.restarVida(instance.comprobarLetra('a'));
         jugador.restarVida(instance.comprobarLetra('l'));
-        assertEquals(jugador.vidas, 7);
+        TestCase.assertEquals(jugador.vidas, 7);
     }
 
     public void testAhorcado11() {
         Ahorcado instance = new Ahorcado();
-        Scanner sc = new Scanner(System.in);Jugador jugador = new Jugador(sc);
+        Scanner sc = new Scanner(System.in);
+        Jugador jugador = new Jugador(sc);
         instance.palabra = "buho";
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
         jugador.restarVida(instance.comprobarLetra('b'));
         jugador.restarVida(instance.comprobarLetra('u'));
         jugador.restarVida(instance.comprobarLetra('l'));
-        assertEquals(jugador.vidas, 9);
+        TestCase.assertEquals(jugador.vidas, 9);
     }
 
     public void testAhorcado12() {
         Ahorcado instance = new Ahorcado();
-        Scanner sc = new Scanner(System.in);Jugador jugador = new Jugador(sc);
+        Scanner sc = new Scanner(System.in);
+        Jugador jugador = new Jugador(sc);
         instance.palabra = instance.conjuntoDePalabras.get(0);
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
@@ -152,13 +157,14 @@ public class AhorcadoTest extends TestCase {
         jugador.restarVida(instance.comprobarLetra('t'));
         jugador.restarVida(instance.comprobarLetra('o'));
         instance.conjuntoDePalabras.remove(0);
-        assertEquals(instance.conjuntoDePalabras.isEmpty(), true);
-        assertEquals(jugador.vidas, 10);
+        TestCase.assertEquals(instance.conjuntoDePalabras.isEmpty(), true);
+        TestCase.assertEquals(jugador.vidas, 10);
     }
 
     public void testAhorcado13() {
         Ahorcado instance = new Ahorcado();
-        Scanner sc = new Scanner(System.in);Jugador jugador = new Jugador(sc);
+        Scanner sc = new Scanner(System.in);
+        Jugador jugador = new Jugador(sc);
         instance.palabra = instance.conjuntoDePalabras.get(0);
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
@@ -189,13 +195,14 @@ public class AhorcadoTest extends TestCase {
         jugador.restarVida(instance.comprobarLetra('t'));
         jugador.restarVida(instance.comprobarLetra('o'));
         instance.conjuntoDePalabras.remove(0);
-        assertEquals(instance.conjuntoDePalabras.isEmpty(), true);
-        assertEquals(jugador.vidas, 9);
+        TestCase.assertEquals(instance.conjuntoDePalabras.isEmpty(), true);
+        TestCase.assertEquals(jugador.vidas, 9);
     }
 
     public void testAhorcado14() {
         Ahorcado instance = new Ahorcado();
-        Scanner sc = new Scanner(System.in);Jugador jugador = new Jugador(sc);
+        Scanner sc = new Scanner(System.in);
+        Jugador jugador = new Jugador(sc);
         instance.palabra = instance.conjuntoDePalabras.get(0);
         instance.letrasRestantes = instance.palabra.length();
         instance.datosAhorcado();
@@ -220,7 +227,7 @@ public class AhorcadoTest extends TestCase {
         jugador.restarVida(instance.comprobarLetra('o'));
         jugador.restarVida(instance.comprobarLetra('z'));
         instance.conjuntoDePalabras.remove(0);
-        assertEquals(instance.conjuntoDePalabras.isEmpty(), false);
-        assertEquals(jugador.vidas, 8);
+        TestCase.assertEquals(instance.conjuntoDePalabras.isEmpty(), false);
+        TestCase.assertEquals(jugador.vidas, 8);
     }
 }

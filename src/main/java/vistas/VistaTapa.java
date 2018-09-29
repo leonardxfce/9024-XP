@@ -1,4 +1,3 @@
-
 package vistas;
 
 import javafx.scene.Scene;
@@ -6,11 +5,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 
 /**
- *
  * @author ikariRules
  */
 public class VistaTapa extends VistaPadre {
@@ -24,20 +20,7 @@ public class VistaTapa extends VistaPadre {
     HBox boxCantidad;
     HBox boxBotones;
 
-    public Scene getScene() {
-        return this.scene;
-    }
-    
-    public Button getBtnAceptar() {
-        return btnAceptar;
-    }
-
-    public Button getBtnCancelar() {
-        return btnCancelar;
-    }
-    
     public VistaTapa() {
-        super();
         btnAceptar = new Button("Aceptar");
         btnCancelar = new Button("Cancelar");
         cantidad = new Label("Cantidad");
@@ -47,6 +30,18 @@ public class VistaTapa extends VistaPadre {
         boxTipo = new HBox();
         boxCantidad = new HBox();
         boxBotones = new HBox();
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public Button getBtnAceptar() {
+        return btnAceptar;
+    }
+
+    public Button getBtnCancelar() {
+        return btnCancelar;
     }
 
     public void config() {

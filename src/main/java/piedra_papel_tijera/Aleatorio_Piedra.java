@@ -6,13 +6,12 @@
 package piedra_papel_tijera;
 
 /**
- *
  * @author caro_
  */
 public class Aleatorio_Piedra {
-    public String piedraEj (String dato){
-        
+    public String piedraEj(String dato) {
+
         return dato;
-        
+
     }
 }

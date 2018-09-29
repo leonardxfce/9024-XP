@@ -6,14 +6,14 @@
 package piedra_papel_tijera;
 
 /**
- *
  * @author caro_
  */
 public class Usuario {
     int vidas = 3;
-    public int quitarVidas (int a){
-        int cantVidas = vidas -a;
+
+    public int quitarVidas(int a) {
+        int cantVidas = vidas - a;
         return cantVidas;
     }
-    
+
 }

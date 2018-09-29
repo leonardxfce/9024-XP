@@ -6,12 +6,11 @@
 package piedra_papel_tijera;
 
 /**
- *
  * @author caro_
  */
 public class JugadaComputadora {
-    public int aleatorio(){
-        int numA= (int)(Math.random()*2);
-        return numA ; 
+    public int aleatorio() {
+        int numA = (int) (Math.random() * 2);
+        return numA;
     }
 }

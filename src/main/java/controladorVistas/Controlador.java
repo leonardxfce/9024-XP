@@ -1,14 +1,14 @@
 package controladorVistas;
 
-import javafx.event.*;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import vistas.Login;
-import login.ModeloLogin;
 import modeloSQL_Envase.Envase_Modelo;
 import org.apache.log4j.Logger;
-import vistas.VistaTapa;
+import vistas.Login;
 import vistas.VistaEnvase;
+import vistas.VistaTapa;
 import vistas.vistaMenu;
 
 public class Controlador implements EventHandler<ActionEvent> {
@@ -52,9 +52,9 @@ public class Controlador implements EventHandler<ActionEvent> {
         String textoDelBoton = botonSeleccionado.getText();
         switch (textoDelBoton) {
             case "Ingresar":
-             //   String usuario = vistaLogin.usuario_campo.getText();
-               // String contrasena = vistaLogin.contrasena_campo.getText();
-               // ModeloLogin mL = new ModeloLogin(usuario,contrasena);
+                //   String usuario = vistaLogin.usuario_campo.getText();
+                // String contrasena = vistaLogin.contrasena_campo.getText();
+                // ModeloLogin mL = new ModeloLogin(usuario,contrasena);
                 //mL.insertar();
                 stage.setScene(menuIntermedioParaElegirFormulario.getScene());
                 break;
@@ -75,7 +75,7 @@ public class Controlador implements EventHandler<ActionEvent> {
                 break;
             case "Guardar Envase":
                 String nombre = vistaEnvase.textField.getText();
-                Envase_Modelo modelo = new Envase_Modelo("A","B","C",1);
+                Envase_Modelo modelo = new Envase_Modelo("A", "B", "C", 1);
                 modelo.insert();
                 break;
 

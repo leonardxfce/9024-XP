@@ -45,7 +45,7 @@ public class InicioAhorcado {
                 }
             }
             if (ahorcado.adivinoLaPalabra()) {
-                logger.debug(">>>>"+ahorcado.palabra+"<<<<");
+                logger.debug(">>>>" + ahorcado.palabra + "<<<<");
                 logger.debug("HAS ADIVINADO LA PALABRA!! 7w7");
             }
             if (!jugador.comprobarVidas()) {

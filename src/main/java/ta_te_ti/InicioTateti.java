@@ -17,11 +17,11 @@ public class InicioTateti {
         int respuesta = tecla.nextInt();
 
         if (respuesta == 1) {
-            todoAleatorio(contador, bandera, miTablero, tecla);
+            this.todoAleatorio(contador, bandera, miTablero, tecla);
         }
 
         if (respuesta == 2) {
-            todo(contador, bandera, miTablero, tecla);
+            this.todo(contador, bandera, miTablero, tecla);
         }
 
     }

@@ -15,15 +15,15 @@ public class EjemploSQLite {
 
     public String conexionEjemplo(String url) {
         try {
-            connection = DriverManager.getConnection(url);
-            statement = connection.createStatement();
-            statement.executeUpdate("drop table if exists person");
-            statement.executeUpdate("create table person (id integer, name string)");
-            statement.executeUpdate("insert into person values(1, 'leo')");
-            statement.executeUpdate("insert into person values(2, 'yui')");
-            rs = statement.executeQuery("select * from person");
-            rs.next();
-            return rs.getString("name");
+            this.connection = DriverManager.getConnection(url);
+            this.statement = this.connection.createStatement();
+            this.statement.executeUpdate("drop table if exists person");
+            this.statement.executeUpdate("create table person (id integer, name string)");
+            this.statement.executeUpdate("insert into person values(1, 'leo')");
+            this.statement.executeUpdate("insert into person values(2, 'yui')");
+            this.rs = this.statement.executeQuery("select * from person");
+            this.rs.next();
+            return this.rs.getString("name");
         } catch (Exception e) {
             Logger logger = Logger.getLogger(EjemploSQLite.class);
             logger.error(e.getMessage());

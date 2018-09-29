@@ -21,27 +21,27 @@ public class Controlador implements EventHandler<ActionEvent> {
     vistaMenu menuIntermedioParaElegirFormulario;
 
     Controlador(Stage primaryStage) {
-        logger = Logger.getLogger(Controlador.class);
-        stage = primaryStage;
-        vistaEnvase = new VistaEnvase();
-        vistaLogin = new Login();
-        vistaTapa = new VistaTapa();
-        menuIntermedioParaElegirFormulario = new vistaMenu();
-        vistaEnvase.config();
-        vistaLogin.config();
-        vistaTapa.config();
-        menuIntermedioParaElegirFormulario.config();
-        vistaLogin.btnIngresar.setOnAction(this);
-        menuIntermedioParaElegirFormulario.getBtnEnvase().setOnAction(this);
-        menuIntermedioParaElegirFormulario.getBtnTapas().setOnAction(this);
-        menuIntermedioParaElegirFormulario.getBtnCerrarSesion().setOnAction(this);
-        vistaEnvase.getAceptar().setOnAction(this);
-        vistaEnvase.getCancelar().setOnAction(this);
-        vistaTapa.getBtnAceptar().setOnAction(this);
-        vistaTapa.getBtnCancelar().setOnAction(this);
-        stage.setTitle("Formulario Envase");
-        stage.setScene(vistaLogin.getScene());
-        stage.show();
+        this.logger = Logger.getLogger(Controlador.class);
+        this.stage = primaryStage;
+        this.vistaEnvase = new VistaEnvase();
+        this.vistaLogin = new Login();
+        this.vistaTapa = new VistaTapa();
+        this.menuIntermedioParaElegirFormulario = new vistaMenu();
+        this.vistaEnvase.config();
+        this.vistaLogin.config();
+        this.vistaTapa.config();
+        this.menuIntermedioParaElegirFormulario.config();
+        this.vistaLogin.btnIngresar.setOnAction(this);
+        this.menuIntermedioParaElegirFormulario.getBtnEnvase().setOnAction(this);
+        this.menuIntermedioParaElegirFormulario.getBtnTapas().setOnAction(this);
+        this.menuIntermedioParaElegirFormulario.getBtnCerrarSesion().setOnAction(this);
+        this.vistaEnvase.getAceptar().setOnAction(this);
+        this.vistaEnvase.getCancelar().setOnAction(this);
+        this.vistaTapa.getBtnAceptar().setOnAction(this);
+        this.vistaTapa.getBtnCancelar().setOnAction(this);
+        this.stage.setTitle("Formulario Envase");
+        this.stage.setScene(this.vistaLogin.getScene());
+        this.stage.show();
     }
 
     @Override
@@ -56,25 +56,25 @@ public class Controlador implements EventHandler<ActionEvent> {
                 // String contrasena = vistaLogin.contrasena_campo.getText();
                 // ModeloLogin mL = new ModeloLogin(usuario,contrasena);
                 //mL.insertar();
-                stage.setScene(menuIntermedioParaElegirFormulario.getScene());
+                this.stage.setScene(this.menuIntermedioParaElegirFormulario.getScene());
                 break;
             case "Cerrar Sesion":
-                stage.setScene(vistaLogin.getScene());
+                this.stage.setScene(this.vistaLogin.getScene());
                 break;
             case "Formulario Envase":
-                stage.setScene(vistaEnvase.getScene());
+                this.stage.setScene(this.vistaEnvase.getScene());
                 break;
             case "Formulario Tapa":
-                stage.setScene(vistaTapa.getScene());
+                this.stage.setScene(this.vistaTapa.getScene());
                 break;
             case "Aceptar":
-                stage.setScene(menuIntermedioParaElegirFormulario.getScene());
+                this.stage.setScene(this.menuIntermedioParaElegirFormulario.getScene());
                 break;
             case "Cancelar":
-                stage.setScene(menuIntermedioParaElegirFormulario.getScene());
+                this.stage.setScene(this.menuIntermedioParaElegirFormulario.getScene());
                 break;
             case "Guardar Envase":
-                String nombre = vistaEnvase.textField.getText();
+                String nombre = this.vistaEnvase.textField.getText();
                 Envase_Modelo modelo = new Envase_Modelo("A", "B", "C", 1);
                 modelo.insert();
                 break;

@@ -21,35 +21,35 @@ public class VistaTapa extends VistaPadre {
     HBox boxBotones;
 
     public VistaTapa() {
-        btnAceptar = new Button("Aceptar");
-        btnCancelar = new Button("Cancelar");
-        cantidad = new Label("Cantidad");
-        tipoDeTapa = new Label("Tipo");
-        seleccionTipoDeTapa = new TextField();
-        seleccionCantidad = new TextField();
-        boxTipo = new HBox();
-        boxCantidad = new HBox();
-        boxBotones = new HBox();
+        this.btnAceptar = new Button("Aceptar");
+        this.btnCancelar = new Button("Cancelar");
+        this.cantidad = new Label("Cantidad");
+        this.tipoDeTapa = new Label("Tipo");
+        this.seleccionTipoDeTapa = new TextField();
+        this.seleccionCantidad = new TextField();
+        this.boxTipo = new HBox();
+        this.boxCantidad = new HBox();
+        this.boxBotones = new HBox();
     }
 
     public Scene getScene() {
-        return scene;
+        return this.scene;
     }
 
     public Button getBtnAceptar() {
-        return btnAceptar;
+        return this.btnAceptar;
     }
 
     public Button getBtnCancelar() {
-        return btnCancelar;
+        return this.btnCancelar;
     }
 
     public void config() {
-        boxTipo.getChildren().addAll(tipoDeTapa, seleccionTipoDeTapa);
-        boxCantidad.getChildren().addAll(cantidad, seleccionCantidad);
-        boxBotones.getChildren().addAll(btnAceptar, btnCancelar);
-        contenido.getChildren().addAll(boxTipo, boxCantidad, boxBotones);
-        contenedor.getChildren().add(contenido);
+        this.boxTipo.getChildren().addAll(this.tipoDeTapa, this.seleccionTipoDeTapa);
+        this.boxCantidad.getChildren().addAll(this.cantidad, this.seleccionCantidad);
+        this.boxBotones.getChildren().addAll(this.btnAceptar, this.btnCancelar);
+        this.contenido.getChildren().addAll(this.boxTipo, this.boxCantidad, this.boxBotones);
+        this.contenedor.getChildren().add(this.contenido);
     }
 
 }

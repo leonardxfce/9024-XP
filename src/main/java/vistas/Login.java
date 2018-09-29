@@ -14,20 +14,20 @@ public class Login extends VistaPadre {
     Label contrasena;
 
     public Login() {
-        usuario = new Label("Usuario");
-        contrasena = new Label("Contraseña");
-        usuario_campo = new TextField();
-        contrasena_campo = new TextField();
-        btnIngresar = new Button("Ingresar");
+        this.usuario = new Label("Usuario");
+        this.contrasena = new Label("Contraseña");
+        this.usuario_campo = new TextField();
+        this.contrasena_campo = new TextField();
+        this.btnIngresar = new Button("Ingresar");
     }
 
     public Scene getScene() {
-        return scene;
+        return this.scene;
     }
 
     public void config() {
-        contenido.getChildren().addAll(usuario, contrasena, usuario_campo, contrasena_campo, btnIngresar);
-        contenedor.getChildren().add(contenido);
+        this.contenido.getChildren().addAll(this.usuario, this.contrasena, this.usuario_campo, this.contrasena_campo, this.btnIngresar);
+        this.contenedor.getChildren().add(this.contenido);
     }
 
 }

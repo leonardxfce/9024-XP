@@ -28,7 +28,7 @@ public class ComprobarJugada {
     public String jugarTresVeces(int jugadaComputadora, String datoUsuario) {
         String resultJugada[] = new String[3];
         for (int i = 0; i < 3; i++) {
-            resultJugada[i] = comprobar(jugadaComputadora, datoUsuario);
+            resultJugada[i] = this.comprobar(jugadaComputadora, datoUsuario);
 
         }
         return "";

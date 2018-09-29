@@ -9,24 +9,24 @@ public class Jugador {
     Scanner read;
 
     public Jugador(Scanner tecladoDelUsuario) {
-        read = tecladoDelUsuario;
-        vidas = 10;
+        this.read = tecladoDelUsuario;
+        this.vidas = 10;
     }
 
     String ingresarLetra() {
-        String letra = read.next();
+        String letra = this.read.next();
         return letra;
     }
 
     void restarVida(boolean z) {
         if (!z) {
-            vidas--;
+            this.vidas--;
         }
     }
 
     boolean comprobarVidas() {
         boolean estado = true;
-        if (vidas == 0) {
+        if (this.vidas == 0) {
             estado = false;
         }
         return estado;

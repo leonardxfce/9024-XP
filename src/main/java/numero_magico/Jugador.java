@@ -10,11 +10,11 @@ class Jugador {
     int vidas;
 
     public Jugador() {
-        vidas = 10;
+        this.vidas = 10;
     }
 
     public int getVidas() {
-        return vidas;
+        return this.vidas;
     }
 
     public void setVidas(int vidas) {
@@ -22,7 +22,7 @@ class Jugador {
     }
 
     void quitarVida() {
-        vidas--;
+        this.vidas--;
     }
 
 

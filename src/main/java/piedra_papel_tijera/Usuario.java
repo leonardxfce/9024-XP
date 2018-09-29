@@ -12,7 +12,7 @@ public class Usuario {
     int vidas = 3;
 
     public int quitarVidas(int a) {
-        int cantVidas = vidas - a;
+        int cantVidas = this.vidas - a;
         return cantVidas;
     }
 

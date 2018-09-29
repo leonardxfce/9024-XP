@@ -32,16 +32,16 @@ public class Envase_Modelo {
         this.tipo = tipo;
         this.material = material;
         this.capacidad = capacidad;
-        url = "jdbc:sqlite:sample.db";
+        this.url = "jdbc:sqlite:sample.db";
     }
 
 
     public void insert() {
         try {
-            connection = DriverManager.getConnection(url);
-            statement = connection.createStatement();
-            System.out.println("insert into envase values(1,'" + nombre + "', '" + tipo + "', '" + material + "', '" + capacidad + "')");
-            statement.executeUpdate("insert into envase values(1,'" + nombre + "', '" + tipo + "', '" + material + "',' " + capacidad + "')");
+            this.connection = DriverManager.getConnection(this.url);
+            this.statement = this.connection.createStatement();
+            System.out.println("insert into envase values(1,'" + this.nombre + "', '" + this.tipo + "', '" + this.material + "', '" + this.capacidad + "')");
+            this.statement.executeUpdate("insert into envase values(1,'" + this.nombre + "', '" + this.tipo + "', '" + this.material + "',' " + this.capacidad + "')");
         } catch (Exception e) {
             Logger logger = Logger.getLogger(EjemploSQLite.class);
             logger.error(e.getMessage());
@@ -50,7 +50,7 @@ public class Envase_Modelo {
 
     //setters y getters
     public String getNombre() {
-        return nombre;
+        return this.nombre;
     }
 
     public void setNombre(String nombre) {
@@ -58,7 +58,7 @@ public class Envase_Modelo {
     }
 
     public String getTipo() {
-        return tipo;
+        return this.tipo;
     }
 
     public void setTipo(String tipo) {
@@ -66,7 +66,7 @@ public class Envase_Modelo {
     }
 
     public String getMaterial() {
-        return material;
+        return this.material;
     }
 
     public void setMaterial(String material) {
@@ -74,7 +74,7 @@ public class Envase_Modelo {
     }
 
     public int getCapacidad() {
-        return capacidad;
+        return this.capacidad;
     }
 
     public void setCapacidad(int capacidad) {
